@@ -78,6 +78,21 @@ Registro de cada uso de IA durante el proyecto, según exige el criterio C8 de l
 
 ---
 
+## 2026-10-18 · Recorte del MVP y user flows de las personas
+
+- **Qué le pedí:** que recortara el MVP y creara el happy path y el user flow de ambos usuarios (Álex y Samuel) dentro del tablero, con las entrevistas y personas ya incluidas.
+- **Qué devolvió:**
+  - Zona **Paso 5 · MVP recortado**: de 7 bloques a 5 funcionalidades (entrar al piso con nombre y código, crear y asignar tareas, panel «¿qué me toca hoy?» + % semanal, avisos automáticos de vencimiento, calendario de la semana), cada una con su motivo de inclusión, más 5 descartes con motivo (chat grupal, calendario mensual con rejilla, registro completo y perfiles, gamificación y gastos, control parental y familias).
+  - Nota en la zona **Paso 6 · Sitemap**: los caminos que se construyen primero son Inicio de sesión → Panel de tareas → Nueva tarea → Detalle de tarea; Chat y Calendario mensual quedan para la iteración 2 (los wireframes ya están dibujados).
+  - Dos diagramas en el tablero: **Paso 5 · User flow · Álex (happy path)** (entrar → panel → tarea del día → marcar hecha → % semanal, con la rama de repartir una tarea a Samuel) y **Paso 5 · User flow · Samuel (happy path)** (entrar → panel → olvido → aviso del sistema → hacer y marcar → % semanal), con flecha gruesa en el camino feliz y discontinua en las ramas alternativas, cada uno en su zona con título.
+- **Qué se conservó:** el MVP de 7 bloques y la tabla DENTRO/FUERA originales siguen visibles como decisión previa; los wireframes y el prototipo del Paso 7 no se tocaron.
+- **Qué se cambió:** el alcance de la primera versión: el chat del MVP pasa a ser "avisos automáticos del sistema" y el calendario mensual pasa a iteración 2.
+- **Motivo del cambio:** el análisis de referentes (Paso 2) indica que el chat compite con WhatsApp y que las apps de este tipo se caen si un compañero no entra; con las 3 preguntas del tablero, el chat y el calendario mensual no son imprescindibles para la tarea más importante de Álex y Samuel.
+- **Nota de trazabilidad:** el recorte es una propuesta de IA fundamentada en el Paso 2 y en las entrevistas del Paso 3; si las entrevistas aportan evidencia de que el chat es imprescindible, se revierte y se documenta aquí.
+- **Incidencia resuelta:** se corrigió un carácter erróneo introducido por la IA en el subtítulo de la zona MVP recortado.
+
+---
+
 ## 2026-10-18 · Opinión crítica sobre el tablero de FigJam existente
 
 - **Qué le pedí:** un Code Review / UX Review del tablero «Planificador Proyecto» analizando la hipótesis, las personas y la definición del MVP.
