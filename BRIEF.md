@@ -32,17 +32,20 @@ fuentes: webs oficiales, OCU, reseñas y comparativas, consulta el 18/10/2026):
 ## 2. Alcance: el MVP
 
 ([Paso 5 · MVP](https://www.figma.com/board/WoBiXXPG4DqxmQclQJ7Yhi?node-id=65-31)) —
-5 funciones dentro, cada una con su motivo:
+6 funciones dentro, cada una con su motivo:
 
-1. **Entrar al piso** con nombre y código del grupo (sin registro completo ni perfiles).
+1. **Entrar o darse de alta en el piso**: con nombre y código del grupo, o creando cuenta y
+   grupo para el primer piso (quien crea la cuenta queda como fundador y recibe el código
+   para compartir).
 2. **Crear y asignar tareas**, con turno para las tareas del grupo.
 3. **Panel «¿qué me toca hoy?»** con estados y porcentaje semanal.
 4. **Avisos automáticos de vencimiento** —sustituyen al chat en el MVP—.
 5. **Calendario de la semana** (próximos 7 días).
+6. **Ver perfiles del grupo**: lista de miembros y ficha individual desde la pestaña «Grupo».
 
 **Fuera, con motivo:** chat grupal (WhatsApp ya lo hace; se reevalúa tras las entrevistas),
-calendario mensual con rejilla (iteración 2), registro y perfiles completos, gamificación y
-gestión de gastos, control parental y familias (pendiente de decidir el segmento).
+calendario mensual con rejilla (iteración 2), gamificación y gestión de gastos, control
+parental y familias (pendiente de decidir el segmento).
 
 ## 3. Personas
 
@@ -69,10 +72,11 @@ gestión de gastos, control parental y familias (pendiente de decidir el segment
   **peso máximo de450 KB por página**, pensado para la persona con la peor conexión (Samuel,
   con datos móviles). Sin imágenes pesadas, fuentes alojadas en el propio sitio y nada de
   reproducción automática de vídeo.
-- **Técnicas:** móvil primero (360 × 800, el dispositivo de ambas personas); wireframes en
-  negro, blanco y gris medio; en esta órbita no hay backend real: el entregable es el
+- **Técnicas:** móvil primero (360 × 800, el dispositivo de ambas personas) con variante
+  desktop (1280 × 800) porque Samuel usa también el portátil; wireframes en negro, blanco y
+  gris medio; en esta órbita no hay backend real: el entregable es el
   prototipo navegable de [Figma Design](https://www.figma.com/design/QX5iyAm2XAjWIZJy5VUftF/Plantilla-para-iniciar-proyectos--Community-?node-id=4-6).
-- **De alcance:** solo las5 funciones del MVP; todo lo que entra también es contenido, código
+- **De alcance:** solo las6 funciones del MVP; todo lo que entra también es contenido, código
   y datos que la aplicación no va a gastar.
 - **De cumplimiento:** consentimiento en las entrevistas, datos anonimizados desde el
   principio (P1, P2…) y cada uso de la IA registrado en [CHANGELOG.md](CHANGELOG.md).
