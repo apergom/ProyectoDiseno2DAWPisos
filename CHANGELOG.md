@@ -13,14 +13,13 @@ Registro de cada uso de IA durante el proyecto, según exige el criterio C8 de l
 - **Qué decidí:** cerrar que el aviso de vencimiento va dentro de la app (nada de notificaciones push de momento), que la semana del calendario empieza en lunes enseñando el día concreto, y que el chat se queda fuera del MVP. Anoté las cuatro decisiones en la zona de «Decisiones tomadas al recorrer el flujo».
 - **Qué conservé:** las fichas de las personas y las transcripciones de las entrevistas, que no se tocaron para nada.
 - **Qué cambié y por qué:** teniendo las respuestas reales ya no tenía sentido dejar decisiones «pendientes hasta las entrevistas»: cada una se cerró con su cita respaldada —P1 «procrastino hasta que son strictly urgentes», P2 «si no hay un registro claro en mi calendario, se me pasan», P1 «una buena organización visual me evitaría discusiones», P2 «fácil de consultar en conexiones lentas»—. El brief pasó de borrador a cerrado con ese mismo enfoque.
-- **Pendiente:** anotar en las fichas el consentimiento y el formato de cada entrevista; hacer el test en Lyssna con 4–5 personas (para subir el C5 a 10); y crear el repo de GitHub.
 
 ---
 
 ## 2026-10-18 · Alta por invitación: se quita el código del piso
 
 - **Qué le pedí:** ajustar el inicio de sesión para que no te metiera directamente en un grupo por defecto, y meter una pantalla de creación de grupo para invitar a la gente por su nombre de usuario (el ID). Como dudaba entre invitación directa o con confirmación, me preguntó y **elegí invitación con aceptación**.
-- **Plan que propuso:** «Inicio de sesión» pasa a pedir usuario y contraseña; «Creación de cuenta» gana el campo de username; «Creación de grupo» cambia el bloque del código por un campo «Invitar por nombre de usuario» con su botón y una lista de invitados pendientes; pantalla nueva de «Invitaciones» en móvil (360 × 800) y en desktop (1280 × 800) para aceptar o rechazar; reenchufar las conexiones del prototipo (56 reacciones en total, sin dejar endpoints rotos); y actualizar en FigJam el user flow, el sitemap, el MVP (reescribiendo la función 1) y los recorridos por persona.
+- **Plan que propuso:** «Inicio de sesión» pasa a pedir usuario y contraseña; «Creación de cuenta» gana el campo de username; «Creación de grupo» cambia el bloque del código por un campo «Invitar por nombre de usuario» con su botón y una lista de invitados pendientes; pantalla nueva de «Invitaciones» en móvil (360 × 800) y en desktop (1280 × 800) para aceptar o rechazar; reenchufar las conexiones del prototipo (sin dejar endpoints rotos); y actualizar en FigJam el user flow, el sitemap, el MVP y los recorridos por persona.
 - **Qué decidí:** que la pantalla de «Invitaciones» fuera paso obligatorio si no tienes piso (y sin menú inferior, como el resto del onboarding); que el creador del piso actúe como fundador; y que la lista de invitados pendientes se vea directamente en «Creación de grupo».
 - **Qué conservé:** las personas, los referentes, las entrevistas, las demás funciones del MVP, el presupuesto de carga de 450 KB, los 8 flujos de inicio y el resto de decisiones tomadas.
 - **Qué cambié y por qué:** cambiamos el alta por código de piso a un sistema de cuenta e invitación. El motivo es técnico y de UX: un código suelto por WhatsApp lo puede usar cualquiera y no identifica al usuario, que es justo lo que requiere el panel de reparto; con el username como ID, el fundador controla a quién invita y el usuario decide si acepta.
@@ -46,18 +45,6 @@ Registro de cada uso de IA durante el proyecto, según exige el criterio C8 de l
 - **Qué decidí:** aplicar los cambios en todo lo que chocaba con el enunciado (menú sin deadlocks, calendario semanal y árbol del sitemap) y mantener el resto intacto.
 - **Qué conservé:** el contenido del tablero (fichas, cuestionarios, zonas del Paso 1, textos del sitemap), salvo los ajustes de estructura indispensables.
 - **Qué cambió y por qué:** el scope de pantallas (se quitó «Grupo» del menú y el Calendario pasó de vista mensual a semanal) y la disposición de las zonas en el canvas. El motivo es que las especificaciones piden un único user flow con edge cases y decisiones documentadas, un sitemap de máximo 3 niveles, un prototipo navegable sin puntos ciegos y un `BRIEF.md` bien estructurado.
-- **Pendiente (ya resuelto):** crear el repositorio de GitHub y subir los archivos; las entrevistas del Paso 3 ya están subidas y transcritas en el tablero desde el 18/10.
-
----
-
-## 2026-10-18 · Recorte del MVP y user flows de las personas
-
-- **Qué le pedí:** recortar el alcance del MVP y dejar dibujados dentro del tablero el happy path general y los user flows específicos para Álex y Samuel.
-- **Plan que propuso:** pasar de 7 bloques a 5 funcionalidades clave (login, crear/asignar tarea, dashboard con % semanal, alertas del sistema y calendario semanal), justificando cada una y añadiendo 5 descartes argumentados; meter una nota en el sitemap indicando las rutas prioritarias; y crear dos diagramas —«User flow · Álex (happy path)» y «User flow · Samuel (happy path)»— marcando el camino principal con línea continua y las ramas alternativas con discontinua.
-- **Qué decidí:** aceptar el tijeretazo del MVP, pero dejando visible el MVP original de 7 bloques y la tabla DENTRO/FUERA como histórico de decisiones, anotando que si las entrevistas pedían chat a gritos, se daría marcha atrás.
-- **Qué conservé:** la tabla DENTRO/FUERA y el MVP inicial de 7 bloques; wireframes y prototipo se quedaron como estaban.
-- **Qué cambió y por qué:** el chat pasa a ser "notificaciones automáticas del sistema" y el calendario mensual se mueve al backlog de la iteración 2. La razón viene del Paso 2: meter un chat es competir contra WhatsApp (donde ya están los grupos del piso) y estas apps mueren si la gente no entra a hablar; analizando las necesidades del tablero, ni el chat ni la vista mensual son bloqueantes para el objetivo principal de Álex y Samuel. **Confirmado el 18/10:** las entrevistas respaldaron la decisión —P1 busca «evitar discusiones» y P2 pide «un registro claro», no otra app de mensajería.
-- **Incidencia resuelta:** corregí un typo que se metió en el subtítulo de la zona del MVP recortado.
 
 ---
 
@@ -84,9 +71,19 @@ Registro de cada uso de IA durante el proyecto, según exige el criterio C8 de l
 ## 2026-10-18 · Pasos 6 y 7: sitemap, wireframes y prototipo
 
 - **Qué le pedí:** maquetar los wireframes de baja fidelidad por pantalla (happy path + estados límite) y montar el prototipo interactivo en la plantilla de Figma Design, abstrayendo los elementos recurrentes en componentes.
-- **Plan que propuso:** trabajar sobre la página «💡 Wireframes» —crear 4 componentes reutilizables (Header, Bottom Nav, Task Card y Primary Button); una pantalla base / frame layout (360 × 800, el viewport de Álex); 8 frames de wireframe utilizando escala de grises con el naming exacto del sitemap; 31 interacciones `ON_CLICK` y 3 flows de entrada (Happy path, Piso nuevo y Error de envío); y sincronizar la zona «Paso 6 · Sitemap» en FigJam.
+- **Plan que propuso:** trabajar sobre la página «Wireframes» —crear 4 componentes reutilizables (Header, Bottom Nav, Task Card y Primary Button); una pantalla base / frame layout (360 × 800, el viewport de Álex); 8 frames de wireframe utilizando escala de grises con el naming exacto del sitemap; 31 interacciones `ON_CLICK` y 3 flows de entrada (Happy path, Piso nuevo y Error de envío); y sincronizar la zona «Paso 6 · Sitemap» en FigJam.
 - **Qué decidí:** estructurar primero el sitemap para tener clara la arquitectura de información y el naming de las pantallas antes de tirar un solo frame en Figma, usando la plantilla compartida solo como workspace.
 - **Qué conservó:** la plantilla base como contenedor; todos los componentes, layouts y pantallas se diseñaron desde cero para el proyecto.
 - **Qué cambió y por qué:** no se modificó nada de los requisitos. Motivo: el criterio exige que cada frame coincida 1:1 con el nodo del sitemap y que la UI use componentes para mantener el principio DRY (si cambias el componente master, se actualiza en todo el prototipo).
 - **Incidencias resueltas:** al clonar una pantalla se fue a otra página del archivo (se volvió a mover a Wireframes); además, la API del motor de prototipos de Figma requería pasar un array en la propiedad `actions` de las reacciones.
-- **Pendiente:** lanzar test de usabilidad en Lyssna con 4–5 usuarios con perfil similar a Álex, planteando una task directa sin guiarlos para detectar puntos de fricción (necesario para rascar la nota máxima en el C5).
+
+---
+
+## 2026-10-18 · Redacción del Brief y Changelog
+
+- **Qué le pedí:** reestructurar la información que fui recopilando en sucio tanto como en la FigJam como en cuadernos y archivos de texto en el ordenador.
+- **Plan que propuso:** añadir fecha de realización de la tarea, ordenar por apartados y dejarlo bien escrito.
+- **Qué decidí:** aceptar la estructura que me otorgo la IA ya que es bastante práctica y ayuda al lector a orientarse de buena manera por la redacción, además de otorgar una información clara y concreta de cada decisión del proyecto.
+- **Qué conservó:** toda la información que estaba plasmada en mis apuntes se encuentra en la documentación del proyecto en los diversos .md pedidos por las especificaciones de entrega.
+- **Qué cambió y por qué:** la manera el la que esta expresada esta información y la estructura de la documentación por apartados.
+   
