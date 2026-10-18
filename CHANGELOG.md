@@ -78,6 +78,19 @@ Registro de cada uso de IA durante el proyecto, según exige el criterio C8 de l
 
 ---
 
+## 2026-10-18 · Wireframes desktop, pantallas de alta y perfiles, y tablero sincronizado
+
+- **Qué le pedí:** primero, completar el wireframe desktop (1280 × 800) que faltaba; después, añadir al user flow una pantalla de creación de cuenta, una de creación de grupo y la posibilidad de ver los perfiles de cada miembro del grupo; y por último, editar todo el tablero de FigJam para que reflejara los cambios de diseño del wireframe.
+- **Qué devolvió:**
+  - **Figma Design:** se completaron las8 pantallas desktop del sitemap en la sección «Wireframes desktop (1280x800) — Samuel» y se corrigió un solape del chat de error en móvil (el pie y el botón «Reintentar» pisaban el último mensaje). Después se crearon4 pantallas nuevas en móvil y4 en desktop («Creación de cuenta», «Creación de grupo», «Ver perfiles» y «Perfil de miembro») con los mismos nombres que el sitemap; la pestaña «Grupo» volvió al menú inferior y a la barra lateral (antes se había quitado por no tener pantalla detrás); los hotspots de la navegación se recolocaron a4 ranuras; el prototipo pasó a110 interacciones sin destinos inválidos y a8 flujos de inicio (los dos nuevos: «Alta de cuenta y grupo» móvil y «Desktop · Alta de cuenta y grupo»).
+  - **FigJam:** el user flow ganó la rama de alta (Inicio de sesión → Creación de cuenta → Creación de grupo → Panel de tareas) y la rama de perfiles (Panel →(pestaña Grupo)→ Ver perfiles →(toque en un miembro)→ Perfil de miembro), con etiquetas en las flechas; el sitemap ganó esos4 nodos con sus flechas y colores (PRINCIPAL/SECUNDARIA) y la nota explica ahora las dos tamaños de frame y los8 flujos; el MVP pasó a6 funcionalidades —entran el alta y los perfiles; el chat sigue fuera—; y el sticky «¿quién crea el piso y reparte la primera tarea?» quedó marcado como resuelto.
+  - **Repo:** BRIEF.md (alcance de6 funciones y variante desktop) y README (los8 flujos del prototipo) actualizados.
+- **Qué se conservó:** las personas, las entrevistas, los referentes, los tres stickies de decisiones que siguen abiertos (notificación de avisos, calendario y chat) y la privacidad; los textos de las funciones2 a5 del MVP se dejaron literales.
+- **Qué se cambió y por qué:** el usuario pidió expresamente que el flujo incluyera creación de cuenta, creación de grupo y perfiles; como el enunciado encadena flujo → sitemap → wireframes, los cambios se propagaron a las tres piezas y al brief para que la rúbrica no quede huérfana. El «6. Chat grupal:» que había quedado a medio escribir en la lista del MVP se completó como «6. Ver perfiles», siguiendo la decisión tomada en esa misma sesión (lista + ficha individual, con pestaña «Grupo» en el menú); el chat se mantiene en «FUERA».
+- **Decisiones de diseño que tomó la IA (bajo supervisión del estudiante):** el fundador del piso es quien crea la cuenta y después el grupo (resuelve la decisión pendiente de «quién reparte la primera tarea»); «Ver perfiles» es una pantalla de lista y «Perfil de miembro» una ficha individual reutilizada para cualquier miembro (Álex, Samuel y Lucía); las pantallas de alta van sin menú, como el inicio de sesión, y los perfiles con el mismo menú que el resto; en el sitemap, «Creación de cuenta» y «Creación de grupo» cuelgan de la raíz y «Ver perfiles» es pestaña de primer nivel con «Perfil de miembro» debajo.
+
+---
+
 ## 2026-10-18 · Auditoría frente al enunciado y correcciones en ambos archivos
 
 - **Qué le pedí:** que revisara los8 pasos del enunciado y modificara lo necesario dentro del tablero de FigJam y del archivo de Figma Design para que se cumplan los criterios de la rúbrica.
