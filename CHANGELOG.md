@@ -78,6 +78,20 @@ Registro de cada uso de IA durante el proyecto, según exige el criterio C8 de l
 
 ---
 
+## 2026-10-18 · Auditoría frente al enunciado y correcciones en ambos archivos
+
+- **Qué le pedí:** que revisara los8 pasos del enunciado y modificara lo necesario dentro del tablero de FigJam y del archivo de Figma Design para que se cumplan los criterios de la rúbrica.
+- **Qué devolvió:**
+  - En **Figma Design**: comprobación de las31 interacciones (todas con destino válido); se quitó la pestaña «Grupo» del componente Menú inferior (no tenía pantalla ni hotspot: era un callejón sin salida) y se recolocaron los hotspots a3 ranuras de120 px; el frame Calendario se reconstruyó como **vista de semana** (del13 al19, con las7 casillas fechadas y el día destacado), coherente con la función5 del MVP.
+  - En **FigJam**: nuevo diagrama **«Paso5·User flow principal (MVP completo)»** con punto de entrada, happy path completo y2 casos límite (código de piso incorrecto y tarea vencida sin marcar → aviso); los dos flujos por persona pasaron a llamarse «Recorrido del flujo como Álex/Samuel»; nueva zona **«Paso5·Decisiones pendientes al recorrer el flujo»** (4 stickies); nueva zona **«Paso3y4·Evidencia: transcripciones y affinity mapping»** con la plantilla por persona y los pendientes; el sitemap se **dibujó como árbol** con raíz,3 niveles como máximo y colores para principal/secundaria/sistema, más leyenda; se añadió al inventario la función de avisos y se actualizó la nota del MVP; las zonas se reordenaron por número de paso.
+  - En el **repositorio**: BRIEF.md reestructurado con los5 elementos exactos del Paso8 —problema con datos, alcance del MVP, personas con enlace a cada ficha, criterios de éxito comprobables y restricciones, incluida la **ambiental de450 KB por página (criterio2.4 WSG del W3C)**—.
+- **Qué se conservó:** todo el contenido del estudiante (fichas de personas, cuestionario, zonas del Paso1, textos del sitemap) salvo los ajustes estrictamente necesarios; el menú y el calendario solo se tocaron donde chocaban con el MVP.
+- **Qué se cambió:** alcance de pantallas («Grupo» fuera del menú; Calendario de mensual a semanal) y orden espacial de las zonas del tablero.
+- **Motivo del cambio:** el enunciado exige un único user flow con casos límite y decisiones anotadas, un sitemap dibujado hasta3 niveles con los mismos nombres que los frames, prototipo sin callejones sin salida y un BRIEF con5 elementos y restricción ambiental.
+- **Pendiente:** crear el repositorio de GitHub y subir README.md, CHANGELOG.md y BRIEF.md (esta máquina no tiene `gh` ni credenciales de GitHub, y el navegador no tiene sesión iniciada); y las entrevistas reales del Paso3, que solo el estudiante puede hacerlas.
+
+---
+
 ## 2026-10-18 · Recorte del MVP y user flows de las personas
 
 - **Qué le pedí:** que recortara el MVP y creara el happy path y el user flow de ambos usuarios (Álex y Samuel) dentro del tablero, con las entrevistas y personas ya incluidas.
