@@ -40,3 +40,20 @@ Cada entrada indica: **qué se le pidió**, **qué devolvió**, **qué se conser
 - **Motivo del cambio:** el tablero estaba ordenado por bloques temáticos y le faltaban los pasos 2 y 3; sin ellos, personas y MVP no tienen evidencia que los respalde.
 - **Nota de trazabilidad:** el borrador de la hipótesis y el análisis de referentes son propuestas de IA con sus fuentes indicadas; el estudiante debe contrastarlos con sus entrevistas y reformularlos antes de cerrar el brief.
 - **Pendiente de la persona estudiante:** realizar las entrevistas (Paso 3) con personas reales y darles consentimiento; a partir de ahí, affinity mapping, personas trazables, recorte del MVP, user flow, sitemap, wireframes y brief.
+
+---
+
+## 2026-10-18 · Pasos 6 y 7: sitemap, wireframes y prototipo
+
+- **Qué le pedí:** dibujar los wireframes de baja fidelidad por pantalla (happy path + estados importantes) y montar el prototipo navegable en la plantilla de Figma Design compartida, con los elementos repetidos convertidos en componentes.
+- **Qué devolvió:** en la página "💡 Wireframes" de la plantilla:
+  - 4 componentes reutilizables: **Cabecera**, **Menú inferior**, **Tarjeta de tarea** y **Botón primario**.
+  - Una **Plantilla de pantalla** (360 × 800, el móvil de Álex) con cabecera y menú como instancias.
+  - 8 frames de wireframe en blanco, negro y gris medio, con líneas en lugar de textos largos y rectángulos con X en lugar de imágenes: *Inicio de sesión, Panel de tareas, Panel de tareas (vacío), Nueva tarea, Detalle de tarea, Calendario, Chat del grupo* y *Chat del grupo (error de envío)*. Los nombres coinciden con el sitemap.
+  - **31 interacciones** ON_CLICK (menú inferior en todas las pantallas, botones, tarjetas, celda del día, reintentar) y **3 flujos de inicio**: Happy path, Piso nuevo (estado vacío) y Error de envío.
+  - La zona **Paso 6 · Sitemap** en el tablero de FigJam, con los mismos nombres de pantalla que los frames.
+- **Qué se conservó:** la plantilla de la comunidad solo se usó como contenedor; todos los componentes y pantallas son capas editables creadas para este proyecto.
+- **Qué se cambió:** nada del enunciado; se definió primero el sitemap para poder nombrar los frames exactamente igual, como pide el paso.
+- **Motivo del cambio:** el enunciado exige que cada frame se llame igual que su pantalla en el sitemap y que los elementos repetidos sean componentes, para que un cambio afecte a todas las pantallas.
+- **Incidencias resueltas:** una pantalla clonada cayó en otra página del archivo (se movió a Wireframes); la API de prototipos exige el campo `actions` (lista) en las reacciones.
+- **Pendiente de la persona estudiante:** prueba del prototipo con 4-5 personas parecidas a Álex en Lyssna (optativo; es lo que lleva el C5 al 10), dándoles una tarea concreta sin explicaciones y anotando dónde se atascan. La pestaña "Grupo" del menú queda sin pantalla por ahora (siguiente iteración).

@@ -11,8 +11,8 @@ sin discutir por quién toca cada cosa.
 | --- | --- |
 | Brief del proyecto | [BRIEF.md](BRIEF.md) |
 | Tablero de FigJam (hipótesis, referentes, entrevistas, personas, MVP) | [Planificador Proyecto](https://www.figma.com/board/WoBiXXPG4DqxmQclQJ7Yhi/Planificador-Proyecto?node-id=0-1) |
-| Archivo de Figma Design (wireframes) | _pendiente_ |
-| Prototipo en modo presentación | _pendiente_ |
+| Archivo de Figma Design (wireframes) | [Plantilla · página Wireframes](https://www.figma.com/design/QX5iyAm2XAjWIZJy5VUftF/Plantilla-para-iniciar-proyectos--Community-?node-id=4-6) |
+| Prototipo en modo presentación | [Flujo "Happy path"](https://www.figma.com/design/QX5iyAm2XAjWIZJy5VUftF/Plantilla-para-iniciar-proyectos--Community-?node-id=537-43) |
 | Registro de uso de IA | [CHANGELOG.md](CHANGELOG.md) |
 
 ## Estructura del repositorio
