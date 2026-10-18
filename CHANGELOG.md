@@ -5,6 +5,19 @@ Cada entrada indica: **qué se le pidió**, **qué devolvió**, **qué se conser
 
 ---
 
+## 2026-10-18 · Affinity mapping de las entrevistas y cuestiones del Paso 5 resueltas
+
+- **Qué le pedí:** que hiciera el affinity mapping con las entrevistas reales (P1 y P2) que el estudiante pegó en el tablero, y que eliminara y resolviera las cuestiones pendientes de la zona del Paso 5.
+- **Qué devolvió:**
+  - **FigJam · zona «Paso 3 y 4 · Evidencia»:** la nota «PENDIENTE: transcribir…» pasó a «HECHO (18/10)», señalando dónde están las respuestas. La zona se amplió y ganó el **affinity mapping** con6 grupos, cada uno con sus citas textuales de las entrevistas (amarillo = P1, azul = P2) y su implicación de producto en verde: «Procrastinar hasta que urge» (→ avisos + panel, funciones3 y4); «Estudio ordenado, hogar improvisado» (→ calendario semanal con días concretos, función5); «El registro claro evita olvidos y discusiones» (→ nombre, turno y estado visibles; chat fuera, función2); «El estado sin depender solo del color» (→ icono + texto en cada estado, ya en los wireframes); «Consultar con conexión justa» (→ restricción de450 KB, WSG2.4); «Un piso de tres: hay que repartir» (→ alta por nombre de usuario e invitación, funciones1 y2).
+  - **FigJam · zona «Paso 5 · Decisiones»:** las4 cuestiones pasan de pendientes a **resueltas con evidencia de las entrevistas** y de amarillo a verde, y el título y la sección dejan de decir «pendientes»: el aviso de vencimiento vive dentro de la app (no push: P2 pide consultar en conexiones lentas y el MVP va sin backend); el calendario empieza en lunes y enseña el día concreto (ambas personas estructuran su semana en torno a las clases); bastan los avisos del sistema y el chat sigue fuera (P1 quiere evitar discusiones con organización visual; P2 echa en falta registro, no conversación); y la cuestión de «quién crea el piso» ya estaba resuelta.
+- **Qué se conservó:** las fichas de personas y las transcripciones del estudiante no se tocaron (las respuestas de P1 y P2 están en sus fichas); el resto de zonas, wireframes, prototipo y brief.
+- **Qué se cambió y por qué:** el enunciado pide pasar cada descubrimiento a notas y hacer el affinity mapping para que las personas y el MVP sean trazables; con las respuestas reales ya disponibles, las4 decisiones del flujo se cerraron citando la frase literal que las respalda en vez de dejarlas abiertas «hasta las entrevistas».
+- **Decisiones de diseño que tomó la IA (bajo supervisión del estudiante):** el aviso de vencimiento se queda dentro de la app en lugar de notificación push; la semana del calendario empieza en lunes y se enseña el día concreto; los estados de tarea se representan con icono + texto además del color (accesibilidad de P2, con deuteranopía). Si el estudiante no está de acuerdo con alguna, se revierte y se documenta.
+- **Pendiente de la persona estudiante:** dar consentimiento y formato de entrevista (las fichas no lo anotan); prueba con4–5 personas en Lyssna; y crear el repositorio de GitHub para subir README.md, CHANGELOG.md y BRIEF.md.
+
+---
+
 ## 2026-10-18 · Alta por invitación: se quita el código del piso
 
 - **Qué le pedí:** que el inicio de sesión ya no metiera a la persona dentro de un grupo, y que hubiera una pantalla de creación de grupo desde la que invitar a los demás por su nombre de usuario (el identificador). Preguntado sobre el modelo de invitación, el estudiante eligió **invitación con aceptación** (no alta directa).
