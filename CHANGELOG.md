@@ -78,6 +78,20 @@ Registro de cada uso de IA durante el proyecto, según exige el criterio C8 de l
 
 ---
 
+## 2026-10-18 · Alta por invitación: se quita el código del piso
+
+- **Qué le pedí:** que el inicio de sesión ya no metiera a la persona dentro de un grupo, y que hubiera una pantalla de creación de grupo desde la que invitar a los demás por su nombre de usuario (el identificador). Preguntado sobre el modelo de invitación, el estudiante eligió **invitación con aceptación** (no alta directa).
+- **Qué devolvió:**
+  - **Figma Design:** la pantalla «Inicio de sesión» pasó a pedir nombre de usuario y contraseña (antes: nombre y código del piso); «Creación de cuenta» ganó el campo de nombre de usuario; «Creación de grupo» sustituyó el bloque del código por un campo «Invitar por nombre de usuario» con su botón «Invitar» y una lista de invitados pendientes (samuel_r y lucia.p); y se creó la pantalla nueva **«Invitaciones»** en móvil (360 × 800) y en desktop (1280 × 800, en la fila4 de la sección de Samuel), con la invitación pendiente de Álex (aceptar o rechazar), el botón «Crear un grupo» y el enlace «Cerrar sesión». El prototipo quedó en56 reacciones sin destinos inválidos: «Crear cuenta» y «Volver» de Crear grupo llevan ahora a «Invitaciones», y desde allí se acepta (→ Panel) o se crea el grupo.
+  - **FigJam:** el user flow reescribió el nodo de entrada y el de inicio de sesión («nombre de usuario y contraseña»), el rombo pasó de «¿Código correcto?» a «¿Tiene piso?» y el caso límite de «código incorrecto» a «usuario o contraseña incorrectos»; el flujo ganó el nodo «Invitaciones» con sus ramas (aceptar la invitación → Panel; «Crear un grupo» → Creación de grupo). El sitemap añadió «Invitaciones» colgando de la raíz, con «Creación de grupo» debajo, y la nota explica el camino de quien no tiene piso. El MVP reescribió la función1 (entrar con nombre de usuario y contraseña, invitando por identificador) y el sticky «¿quién crea el piso?» se actualizó (quien crea la cuenta pasa por Invitaciones y funda el grupo invitando por nombre de usuario).
+  - **Repo:** BRIEF.md (función1 y criterio de éxito5) ajustados al nuevo modelo.
+- **Qué se conservó:** las personas, los referentes, las entrevistas, las demás funciones del MVP, la restricción ambiental de450 KB, los8 flujos de inicio y los stickies de decisiones que siguen abiertos.
+- **Qué se cambió y por qué:** el alta dejó de ser por código de piso para ser por cuenta e invitación. El motivo es que un código compartido en el grupo de WhatsApp permite entrar a cualquiera que lo vea y no identifica a cada persona, justo lo que el panel de reparto necesita; con el nombre de usuario como identificador, el fundador elige a quién invita y la persona invitada acepta o rechaza.
+- **Decisiones de diseño que tomó la IA (bajo supervisión del estudiante):** «Invitaciones» es el punto de paso obligatorio de quien no tiene piso (acepta una invitación o crea la suya propia) y va sin menú, como el resto del alta; el fundador sigue siendo quien crea la cuenta; y la lista de invitados pendientes se muestra en la propia «Creación de grupo» para que el fundador vea quién ha aceptado.
+- **Incidencia resuelta:** varios clones de elementos cayeron fuera de su frame (en la página «Cover» o en la raíz de la página de wireframes) y se recolocaron dentro de «Creación de cuenta», «Creación de grupo» e «Invitaciones» en ambos tamaños; el prototipo se volvió a validar (sin destinos inválidos) y el texto de «Volver» de Crear grupo pasó a «Volver a Invitaciones».
+
+---
+
 ## 2026-10-18 · Wireframes desktop, pantallas de alta y perfiles, y tablero sincronizado
 
 - **Qué le pedí:** primero, completar el wireframe desktop (1280 × 800) que faltaba; después, añadir al user flow una pantalla de creación de cuenta, una de creación de grupo y la posibilidad de ver los perfiles de cada miembro del grupo; y por último, editar todo el tablero de FigJam para que reflejara los cambios de diseño del wireframe.
