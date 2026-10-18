@@ -1,7 +1,8 @@
 # Brief del proyecto — Planificador de tareas del piso compartido
 
-> **Estado:** borrador de trabajo (Paso 8). Se cierra cuando las entrevistas reales
-> del Paso 3 estén transcritas en el tablero. Cada dato enlaza a su zona del
+> **Estado:** cerrado el 18/10/2026 (Paso 8). Las entrevistas reales del Paso 3 (P1 y P2)
+> están hechas y sus respuestas en el tablero, con el affinity mapping que las agrupa y
+> cierra las decisiones del flujo. Cada dato enlaza a su zona del
 > [tablero de FigJam](https://www.figma.com/board/WoBiXXPG4DqxmQclQJ7Yhi/Planificador-Proyecto?node-id=0-1).
 
 ## 1. Problema, respaldado por datos
@@ -26,8 +27,14 @@ fuentes: webs oficiales, OCU, reseñas y comparativas, consulta el 18/10/2026):
 - **Hallazgo clave:** el competidor real es el grupo de WhatsApp —fácil, pero no asigna ni
   hace seguimiento—. Ninguna app responde de un vistazo a «¿a quién le toca hoy?».
 
-*Pendiente hasta el Paso 3:* contrastar estas afirmaciones con las transcripciones reales
-(P1, P2…) — ver [zona de evidencia](https://www.figma.com/board/WoBiXXPG4DqxmQclQJ7Yhi?node-id=84-170).
+**Contraste con las entrevistas** (P1 y P2, hechas el 18/10; ver
+[zona de evidencia con el affinity mapping](https://www.figma.com/board/WoBiXXPG4DqxmQclQJ7Yhi?node-id=84-170)):
+la hipótesis se confirma — P1 hace las tareas «cuando me acuerdo» y las procrastina «hasta
+que son estrictamente urgentes», y P2 olvida las compartidas «si no hay un registro claro»;
+P1 pide expresamente «evitar discusiones» con organización visual. Las entrevistas añaden
+dos cosas que la hipótesis no decía: la semana de ambos gira en torno a las clases (de ahí
+el calendario semanal con días concretos) y P2, con deuteranopía, necesita que cada estado
+lleve icono y texto, no solo color.
 
 ## 2. Alcance: el MVP
 
@@ -54,7 +61,8 @@ parental y familias (pendiente de decidir el segmento).
   móvil Android gama media, datos4G y wifi del piso.
   [Ficha](https://www.figma.com/board/WoBiXXPG4DqxmQclQJ7Yhi?node-id=39-46).
 - **Samuel Ríos** — persona **secundaria**,24 años, estudiante; móvil de gama de entrada y
-  portátil, con datos móviles fuera del piso: es la persona con **la peor conexión**.
+  portátil, con datos móviles fuera del piso: es la persona con **la peor conexión**. Tiene
+  **deuteranopía**, por eso todo estado de tarea lleva icono y texto además de color.
   [Ficha](https://www.figma.com/board/WoBiXXPG4DqxmQclQJ7Yhi?node-id=39-56).
 
 ## 4. Criterios de éxito (comprobables sobre estas personas)
