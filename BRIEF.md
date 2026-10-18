@@ -34,9 +34,10 @@ fuentes: webs oficiales, OCU, reseñas y comparativas, consulta el 18/10/2026):
 ([Paso 5 · MVP](https://www.figma.com/board/WoBiXXPG4DqxmQclQJ7Yhi?node-id=65-31)) —
 6 funciones dentro, cada una con su motivo:
 
-1. **Entrar o darse de alta en el piso**: con nombre y código del grupo, o creando cuenta y
-   grupo para el primer piso (quien crea la cuenta queda como fundador y recibe el código
-   para compartir).
+1. **Entrar con nombre de usuario y contraseña** —ya no con código del piso—: la cuenta se
+   crea eligiendo un nombre de usuario, que es el identificador con el que cualquier
+   compañero puede invitarle. Quien no tiene piso pasa por «Invitaciones»: acepta la suya o
+   crea el grupo invitando a cada persona por su nombre de usuario.
 2. **Crear y asignar tareas**, con turno para las tareas del grupo.
 3. **Panel «¿qué me toca hoy?»** con estados y porcentaje semanal.
 4. **Avisos automáticos de vencimiento** —sustituyen al chat en el MVP—.
@@ -64,7 +65,8 @@ parental y familias (pendiente de decidir el segmento).
 3. Una semana de piso en uso: **≥80 %** de las tareas del panel se marcan el día que les toca
    (lo mide la barra de porcentaje semanal).
 4. Samuel localiza su tarea del día y su aviso en **2 toques o menos**.
-5. Cualquier persona nueva entra al piso (nombre + código) en **menos de1 minuto** sin ayuda.
+5. Cualquier persona nueva entra al piso en **menos de1 minuto** sin ayuda, ya sea aceptando
+   su invitación o creando el grupo e invitando por nombre de usuario.
 
 ## 5. Restricciones del proyecto
 
