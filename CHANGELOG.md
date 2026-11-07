@@ -8,6 +8,21 @@ Registro de cada uso de IA durante el proyecto, según exige el criterio C8 de l
 
 # CHANGELOG de uso de IA — Órbita 2: "Diseñar para que se entienda"
 
+## 2026-11-07 · Paso 2 (final): vuelven las 4 pestañas y ajustes de lógica
+
+- **Qué le pedí:** «¿puedes añadirme todas las pestañas que aparecen en el primer wireframe y hacer cambios de lógica que consideres oportunos?». Como la frase admitía dos lecturas (restaurar las 4 pestañas originales, con Chat, o unificar las que ya estaban sin Chat), pregunté antes de tocar nada; **elegí restaurar las 4 originales, con Chat**, y dejar a la IA los cambios de lógica que considerara oportunos.
+- **Qué comprobé antes de cambiar nada:** leí las reacciones del prototipo original para no inventar destinos. En el menú inferior: x0 → Panel de tareas, x90 → Calendario, x180 → Chat del grupo, x270 → Ver perfiles (la etiqueta de esa pestaña dice «Grupo»). En la barra lateral desktop: y148 → Calendario, y196 → Chat del grupo, y244 → Ver perfiles. Y el icono de la cabecera de Panel y Calendario (móvil) no tenía hotspot: era un control muerto.
+- **Qué cambié (en las 10 pantallas rediseñadas):**
+  - *Navegación*: vuelven las 4 pestañas —Tareas, Calendario, Chat y Grupo— en su hueco original (4 slots de 90 px en móvil; y = 120/160/200/240 en desktop), y los hotspots recuperan sus destinos originales.
+  - *Pestaña activa*: se resalta con peso (Inter Semi Bold) y tono oscuro, y las inactivas se atenúan al 45 %. El estado no depende solo del color: además cambia la tipografía. Activa = Tareas en Panel, Nueva tarea y Detalle; Calendario en Calendario.
+  - *Cabecera móvil*: se ocultan la caja y el «☰» de Panel y Calendario, que no llevaban a ninguna parte. La navegación real es el menú inferior.
+  - *Notas*: las 8 notas de las dos secciones se reescriben para reflejar el menú de 4 pestañas, la activa resaltada y el icono de cabecera quitado.
+- **Qué conservé:** el resto del rediseño (primario relleno / secundario texto, «X» → «⋮», metadatos en tarjetas, «2 de 5 completadas», «HOY», objetivos de 44 × 44, Fecha+Hora), la página 💡 Wireframes intacta y el inventario del Paso 1. La decisión de la Órbita 1 de dejar el chat **fuera de las funciones prioritarias del MVP** sigue tal cual documentada en el tablero: lo que se restaura aquí es la pestaña, porque los wireframes y el prototipo original sí tienen pantalla de «Chat del grupo» y el flujo «Error de envío» pasa por ella — así la navegación de las copias cuadra con la del prototipo en vez de contradecirla.
+- **Incidencias:** al clonar la etiqueta «Chat» dentro de cada menú, los 8 clones (4 móviles y 4 desktop) acabaron sueltos en la página en vez de dentro de su frame; lo detecté en la primera validación visual, donde el menú seguía mostrando solo 3 pestañas. Los recolqué con `appendChild` explícito dentro de cada menú/sidebar y comprobé después que no queda ningún nodo huérfano en la pestaña.
+- **Validación:** capturas de Panel de tareas y Calendario en móvil y desktop con las 4 pestañas, la activa resaltada y el icono de cabecera fuera; y comprobación de que la página 💡 Wireframes sigue con sus 23 elementos y 8 flujos.
+
+---
+
 ## 2026-11-07 · Paso 2 (desktop): sección «Wireframes rediseñados · desktop»
 
 - **Qué le pedí:** que hiciera también el wireframe de desktop: misma sección nueva en la pestaña `Orbita 2 :p`, con las 5 pantallas del happy path desktop (1280 × 800) duplicadas y sus notas.
