@@ -8,6 +8,22 @@ Registro de cada uso de IA durante el proyecto, según exige el criterio C8 de l
 
 # CHANGELOG de uso de IA — Órbita 2: "Diseñar para que se entienda"
 
+## 2026-11-07 · Paso 4: tipografía (Inter, dos pesos y escala de 6 niveles)
+
+- **Qué le pedí:** montar el sistema tipográfico del Paso 4. Antes le pregunté las dos decisiones que eran mías y elegí entre sus opciones: la familia (**Inter**, se mantiene) y los pesos (**solo Regular 400 y Bold 700**, de entre dos y tres pesos posibles).
+- **Plan que propuso (apuntes del apartado 4):** elegir pensando en legibilidad en pantalla y en las personas; construir la escala modular desde 16 px con razón 1,25 redondeada a múltiplos de 4; que tenga entre 6 y 8 niveles con nombre, tamaño, altura de línea y peso; probarla con un texto real asignando un nivel a cada línea; simular la letra al 200 % duplicando los tamaños; y recoger la correspondencia con las etiquetas de HTML en una tabla de tres columnas, teniendo en cuenta que **la etiqueta la decide el significado y el nivel el aspecto**.
+- **Qué decidí yo (con el plan delante):**
+  - *Familia: Inter* — palo seco pensada para pantalla, con altura de la x generosa y cifras claras, que importa porque aquí se leen horas y fechas a diario («Hoy 18:00», «Semana del 13 al 19»); neutra para un piso compartido donde no manda el gusto de una sola persona; licencia libre en Google Fonts; y ya es la de los wireframes, así que no hay que repasar lo hecho. Atkinson Hyperlegible, la alternativa de los apuntes para baja visión, se descarta por continuidad, no por defectos.
+  - *Dos pesos: Regular (400) y Bold (700)* — cada peso es un archivo que el navegador descarga (WSG 2.18) y Samuel se conecta por datos móviles; la jerarquía fina la dan el tamaño y el color del Paso 3, no meter más pesos. Con eso, `label` y `caption` comparten tamaño y se distinguen por el peso, igual que en el ejemplo oficial.
+  - *Seis niveles:* `heading-1` 32/40, `heading-2` 24/32, `heading-3` 20/28 (los tres Bold), `body` 16/24 Regular, `label` 14/20 Bold y `caption` 14/20 Regular. **Sin nivel `display`**: Planificador no tiene pantalla de inicio con título grande y, si un nivel no se usa, sobra.
+- **Qué construí en Figma:** el frame «Tipografía · Paso 4», debajo del de color en la pestaña `Orbita 2 :p`, con cinco bloques: cabecera con el motivo de cada elección; **01** la escala con especimen de texto real por nivel; **02** la tabla nivel → etiqueta HTML → uso (`h1`, `h2`, `h3`, `p`, `label`/`button`/`a`, `small`/`time`/`a`); **03** la pantalla «Detalle de tarea» línea a línea con el nivel que le toca en cada una; **04** la simulación al 200 %; y **05** las reglas de legibilidad con la muestra de cifras (0/O, 1/l/I y horas).
+- **Qué destapó la prueba del 200 %:** (a) la pantalla crece hasta 1680 px y hace scroll sin que nada se corte ni se solape, que es lo que exige WCAG 1.4.4; (b) **la barra inferior de 4 pestañas no cabe al doble**: con etiquetas a 28 px necesita unos 600 px dentro de 360 —se anota la solución: desplazamiento horizontal dentro de la propia barra (`overflow-x`), permitido por WCAG y para maquetar en la Órbita 3—; y (c) el texto provisional de los wireframes (metadatos a 10 px, «HOY» a 8 px) se queda por debajo del mínimo de 14 px que piden los apuntes, así que al construir los mockups del Paso 8 todo texto baja a su nivel de escala.
+- **Qué conservé:** los wireframes y las secciones de los Pasos 1 a 3 intactos (el texto provisional de esos wireframes no se toca: son de baja fidelidad y la escala se aplica al maquetar), y nada fuera de la pestaña.
+- **Herramientas:** no usé Fontjoy ni comparé parejas porque aquí solo hay una familia (las parejas se resuelven con una sola tipografía bien escalonada); la comparación de licencias y de cifras quedó anotada en la cabecera de la sección.
+- **Incidencias:** un error de sintaxis por unas comillas dobles dentro de un string, que se corrigió antes de ejecutar nada; comprobación final de la pestaña sin nodos huérfanos y sin solapes entre frames.
+
+---
+
 ## 2026-11-07 · Paso 3: sistema de color (escalas, tokens y contraste)
 
 - **Qué le pedí:** construir el sistema de color siguiendo el orden del Paso 3. Antes de empezar le pregunté dos cosas y decidí yo: el **color principal** (elegí el verde azulado entre las tres opciones planteadas desde el brief: azul, verde azulado y naranja) y confirmar que **tengo el plan de Educación de Figma** activo, que es el que permite los modos de variables que exige el Paso 7.
