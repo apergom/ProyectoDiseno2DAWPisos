@@ -8,6 +8,22 @@ Registro de cada uso de IA durante el proyecto, según exige el criterio C8 de l
 
 # CHANGELOG de uso de IA — Órbita 2: "Diseñar para que se entienda"
 
+## 2026-11-07 · Paso 2 (desktop): sección «Wireframes rediseñados · desktop»
+
+- **Qué le pedí:** que hiciera también el wireframe de desktop: misma sección nueva en la pestaña `Orbita 2 :p`, con las 5 pantallas del happy path desktop (1280 × 800) duplicadas y sus notas.
+- **Plan que propuso:** leer primero las pantallas desktop del flujo «Desktop · Happy path» (Inicio de sesión, Panel de tareas, Nueva tarea, Detalle de tarea y Calendario), clonarlas en una segunda sección sin tocar los originales, y aplicar en desktop los mismos criterios que en móvil adaptados a su patrón de navegación (la navegación es la **barra lateral**, no el menú inferior).
+- **Qué cambié (por pantalla):**
+  - *Barra lateral (las 4 pantallas de contenido)*: se quita «Chat» y «Grupo» sube a su hueco → Tareas, Calendario y Grupo; los hotspots se recolocan y el de Chat se oculta (misma decisión del MVP que en móvil).
+  - *Inicio de sesión*: «Crear una cuenta nueva» queda justo bajo «Entrar» sin el separador que lo empujaba al fondo, y «Entrar» pasa a botón relleno. El bloque centrado se mantiene: aquí ya estaba equilibrado (en móvil subió porque había un hueco vacío).
+  - *Panel de tareas*: la barra de progreso pasa a texto «2 de 5 completadas»; «X» de las tarjetas → «⋮»; metadatos (responsable · categoría · hora) en las 4 tarjetas; «+ Nueva tarea» relleno como única primaria.
+  - *Nueva tarea*: **gana los campos «Fecha» y «Hora» en fila, que no existían en desktop** (una tarea sin fecha no puede entrarse en el calendario); «▾» en el campo Responsable; «Guardar tarea» baja hasta después de los campos nuevos y se rellena.
+  - *Detalle de tarea*: «Marcar como hecha» primario y «Editar» a botón de texto secundario (antes idénticos); «X» del bloque → «⋮».
+  - *Calendario*: flechas ← → con botones de 44 × 44 (antes iconos sueltos de 20 px); «HOY» escrito en la celda de hoy junto al «15»; «⋮» y metadatos en las 2 tarjetas. Las celdas ya medían 120 × 72, por encima del mínimo.
+- **Qué conservé:** la página 💡 Wireframes intacta (23 elementos, mismos 8 flujos, sin clones sueltos), los componentes maestros y todo el rediseño móvil anterior. Las notas desktop explican los mismos motivos que las de móvil, con sus diferencias.
+- **Incidencia:** un error de sintaxis en el primer intento de rediseñar el calendario (una línea sobrante); se reejecutó el script corregido sin efectos secundarios.
+
+---
+
 ## 2026-11-07 · Paso 2: sección «Wireframes rediseñados» y rediseño del happy path
 
 - **Qué le pedí:** crear dentro de la pestaña `Orbita 2 :p` una sección de wireframes rediseñados, duplicar ahí las pantallas del happy path móvil (Inicio de sesión, Panel de tareas, Nueva tarea, Detalle de tarea y Calendario) sin tocar nada de la página 💡 Wireframes, y aplicar el rediseño. Le pasé por escrito mis cinco propuestas de cambios y **elegí aplicar las cinco propuestas completas**.
