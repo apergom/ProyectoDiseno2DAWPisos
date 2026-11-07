@@ -8,6 +8,27 @@ Registro de cada uso de IA durante el proyecto, según exige el criterio C8 de l
 
 # CHANGELOG de uso de IA — Órbita 2: "Diseñar para que se entienda"
 
+## 2026-11-07 · Paso 5: espaciado, retícula, radios y elevación
+
+- **Qué le pedí:** montar el sistema de composición del Paso 5. Antes le pregunté las dos decisiones que eran mías y elegí entre sus opciones: la **cuadrícula de espaciado** (4 px, entre 4 y 8) y **sobre qué wireframe colocar la retícula** (el Calendario, que es el más complejo de los diez: 28 textos, retícula de 7 celdas, dos tarjetas y barra de 4 pestañas).
+- **Plan que propuso (apuntes del apartado 5):** escala de espaciado sobre la cuadrícula elegida con la regla de proximidad (interior menor que exterior); retícula de columnas del dispositivo de la persona principal y de los demás tamaños que las personas usen; escala de radios; entre dos y cuatro niveles de elevación con sombras reales y nunca bordes grises; colocar la retícula sobre el wireframe más complejo y comprobar alineación y separaciones; y medir los elementos pulsables, que en móvil tienen que llegar a 44 × 44 px.
+- **Qué decidí yo (con el plan delante):**
+  - *Base 4 px* — porque la pantalla es densa y hace falta un paso intermedio; además la escala tipográfica del Paso 4 ya está redondeada a múltiplos de 4, así que texto y espacio comparten cuadrícula. Escala de 8 espacios: 4, 8, 12, 16, 24, 32, 48 y 64, con usos concretos de la app (16 = margen y relleno de tarjeta, 32 = cabecera ↔ título —medido: 32—, 64 = alto de cabecera y menú —medido: 64—, 48 = alto del botón primario —medido: 48—).
+  - *Retícula móvil: 4 columnas de 76 px con medianil 8 y margen 16* — da 328 px de contenido, que es exactamente el ancho de las tarjetas (4 columnas completas). *Desktop: 12 columnas de la misma columna de 76 con margen 20* desde la barra lateral: misma columna en los dos tamaños para que un componente no se recalcule.
+  - *Radios en cinco pasos: 0, 4, 8, 16 y completo*, con la regla radio interior = radio exterior − relleno. *Elevación en 4 niveles* (0 a 3), con la nota de que en modo oscuro la profundidad se marca subiendo escalón de superficie, porque una sombra oscura no se ve sobre fondo oscuro.
+- **Qué construí en Figma:** el frame «Espaciado, retícula y composición · Paso 5», debajo del de tipografía, con seis bloques: cabecera con los motivos; **01** la escala de espaciado con la muestra del espacio real entre dos bloques; **02** las dos retículas dibujadas, con las tarjetas de 328 encajadas en las columnas; **03** los cinco radios con sus muestras; **04** los cuatro niveles de elevación con sombras reales en Figma; **05** la retícula colocada sobre una copia del Calendario con sus columnas de contenido y de días, más las tablas de alineación y de separaciones; y **06** la medición de objetivos táctiles de las cinco pantallas móviles.
+- **Qué destapó la medición (y se corrigió en los wireframes):**
+  1. *La fila de días estaba en x=14*, 2 px fuera del margen de 16: se recolocaron los 22 nodos de la fila. La aritmética obliga a una excepción documentada —7 celdas de 44 px son 308 px y en 328 de contenido quedan 20 px para 6 medianiles = 3,33 px—: se sacrifica el medianil, que es la separación menos visible, y se conservan la alineación y el táctil.
+  2. *Las dos flechas del mes estaban pegadas* (gap 0): dos objetivos adyacentes sin separación invitan a pulsar el equivocado; ahora hay 8 px.
+  3. *Cuatro elementos no llegaban a 44 × 44:* el checkbox y el «⋮» de las tarjetas (24 × 24), el enlace «Crear una cuenta nueva» (328 × 30) y el botón «Editar» (texto de 13 px de alto). Se resolvieron con hotspots transparentes de 44 × 44 —12 en total—: el icono no se infla, lo que crece es su área pulsable.
+  4. *60 elementos tenían radios sueltos de 2, 5 y 6 px* (barras de reserva y barra de progreso): se normalizaron a la escala (4 y completo).
+  5. *Las separaciones verticales se desvían 1 o 2 px*, pero no por el espaciado: salen de las cajas de texto provisional (19, 17, 15, 13 y 12 px), que no son múltiplos de 4. Al aplicar la escala tipográfica en los mockups, cada caja medirá 20, 24, 28 o 40 y todo caerá en la cuadrícula.
+  6. *El desktop está fuera de su retícula* (arranca en 280 en lugar de 260 y su segunda columna está en 780 en lugar de 764): queda anotado para el Paso 8, porque el enunciado exige comprobar sobre el wireframe más complejo, que es el Calendario, y ese está comprobado y corregido.
+- **Qué conservé:** el hueco de 16 px entre tarjetas, igual que su padding (empate aceptado porque cada tarjeta lleva borde propio, así que la agrupación ya está marcada; con 4 tarjetas, el botón y la barra fija no hay presupuesto vertical para más), las decisiones de los pasos anteriores y nada fuera de la pestaña.
+- **Incidencias:** unas notas de 400 px hacían crecer la raíz a 1908 px (ajustadas a 360) y 15 textos de tabla se cortaban por ser de una sola línea (pasaron a ajuste de altura); comprobación final de la pestaña con 9 raíces, sin solapes y sin nodos huérfanos.
+
+---
+
 ## 2026-11-07 · Paso 4: tipografía (Inter, dos pesos y escala de 6 niveles)
 
 - **Qué le pedí:** montar el sistema tipográfico del Paso 4. Antes le pregunté las dos decisiones que eran mías y elegí entre sus opciones: la familia (**Inter**, se mantiene) y los pesos (**solo Regular 400 y Bold 700**, de entre dos y tres pesos posibles).
