@@ -8,6 +8,23 @@ Registro de cada uso de IA durante el proyecto, según exige el criterio C8 de l
 
 # CHANGELOG de uso de IA — Órbita 2: "Diseñar para que se entienda"
 
+## 2026-11-07 · Paso 3: sistema de color (escalas, tokens y contraste)
+
+- **Qué le pedí:** construir el sistema de color siguiendo el orden del Paso 3. Antes de empezar le pregunté dos cosas y decidí yo: el **color principal** (elegí el verde azulado entre las tres opciones planteadas desde el brief: azul, verde azulado y naranja) y confirmar que **tengo el plan de Educación de Figma** activo, que es el que permite los modos de variables que exige el Paso 7.
+- **Plan que propuso (apuntes del apartado 3):** partir del brief y de las personas; convertir principal, secundario y neutros en escalas del 50 al 900 manteniendo el tono en HSL y moviendo solo saturación y luminosidad; añadir los colores de estado solo con los pasos que hacen falta; decidir los tokens semánticos apuntando, en cada modo, al tono que mejor funciona; medir todas las parejas de fondo y texto en los dos modos (4,5:1 en texto y 3:1 en bordes e iconos); y convertir una captura a escala de grises para ver qué información depende solo del color.
+- **Qué decidí yo (con el plan delante):**
+  - *Principal: verde azulado (teal)* — transmite orden y calma, que es justo lo que Álex pide para «evitar discusiones», y es el eje azul-verde el que mejor se distingue con la deuteranopía de Samuel.
+  - *Secundario: índigo* — elegido a propósito fuera de la familia rojo-verde-ámbar para que una insignia de categoría no se confunda nunca con un error, un éxito o un aviso.
+  - *Neutros con tono frío (190°)* para acompañar al teal sin competir con él, y *estados convencionales* (rojo error, verde éxito, ámbar aviso): ir en contra de una convención obliga a la persona a aprender algo nuevo, y la deuteranopía se cubre con icono y texto en cada estado, como ya decía el brief.
+  - *Tono de cada modo:* en claro `color/primary` = teal-700 (el primero que llega a 4,5:1 con texto blanco y sobre el fondo) y en oscuro teal-300 con texto oscuro; `color/warning` = amber-700 en claro y amber-400 en oscuro.
+- **Qué construí en Figma:** el frame «Sistema de color · Paso 3» dentro de la pestaña `Orbita 2 :p`, debajo de las secciones de wireframes, con cinco bloques: cabecera con el motivo de cada elección; **01** escalas primitivas (teal, indigo y neutral del 50 al 900, más rojo, verde y ámbar de estado); **02** tabla de 12 tokens semánticos con su valor en modo claro y oscuro; **03** tabla de contraste con las 19 parejas medidas en los dos modos; **04** la comprobación en escala de grises —el Panel del Paso 2 colado con la paleta, su gemelo convertido a gris por luminancia (mismo criterio que un editor de imágenes) y la demo de estados—; y **05** las frases «por qué este tono» para la auditoría oral.
+- **Qué cambió tras comprobar (antes de dibujar nada):** la primera pasada de contrastes salió con **6 parejas por debajo del mínimo** y corregí el sistema: el teal-600 no daba para texto (3,44:1) → `primary` apunta al teal-700; el ámbar de aviso no llegaba a 3:1 como icono sobre la tarjeta (1,72:1) → token de aviso = amber-700 en claro; y el fondo suave de la insignia de categoría no llegaba a 3:1 (1,26:1) → se comprueba su borde/etiqueta (10,11:1) y su texto (13,49:1), dejando el fondo como elemento decorativo. Resultado final: **19/19 parejas cumplen** su mínimo en los dos modos.
+- **Qué conservé:** el borrador de tokens escrito a mano en la pestaña (recogido en el inventario del Paso 1), todo el rediseño de los Pasos 1 y 2 y, por supuesto, la página 💡 Wireframes intacta.
+- **Nota sobre la medición:** los ratios están calculados con la fórmula de contraste WCAG 2.2 —la misma que usa el plugin Stark— mediante código, porque el plugin no se puede ejecutar de forma automática; conviene repasar la tabla con Stark a mano antes de entregar.
+- **Incidencias:** un error de sintaxis en la primera ejecución (una clave mal escrita en la escala neutra) y un fallo transitorio «Invalid fileKey» del servidor Figma que se resolvió reintentando. Nada tocado fuera de la pestaña.
+
+---
+
 ## 2026-11-07 · Paso 2 (final): vuelven las 4 pestañas y ajustes de lógica
 
 - **Qué le pedí:** «¿puedes añadirme todas las pestañas que aparecen en el primer wireframe y hacer cambios de lógica que consideres oportunos?». Como la frase admitía dos lecturas (restaurar las 4 pestañas originales, con Chat, o unificar las que ya estaban sin Chat), pregunté antes de tocar nada; **elegí restaurar las 4 originales, con Chat**, y dejar a la IA los cambios de lógica que considerara oportunos.
