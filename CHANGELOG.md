@@ -2,233 +2,120 @@
 
 Registro de cada uso de IA durante el proyecto, según exige el criterio C8 de la rúbrica.
 
-**Modo de uso: IA en modo plan.** A la IA no se le encargó el proyecto: en cada paso le
-pedí un plan —qué cambiar, dónde y cómo— y seguí sus indicaciones sobre el tablero de
-FigJam y el archivo de Figma Design, revisando cada resultado antes de dar el siguiente.
-Las decisiones son mías y se justifican con datos de la investigación (referentes,
-entrevistas P1 y P2, personas). Por eso cada entrada recoge **qué le pedí**, **qué plan
-propuso**, **qué decidí con el plan delante**, **qué conservé** y **qué cambié y por qué**.
+**Modo de uso: IA en modo plan.** A la IA no se le encargó el proyecto: en cada paso le pedí un plan —qué cambiar, dónde y cómo— y fui siguiendo sus indicaciones sobre el tablero de FigJam y el archivo de Figma Design, revisando cada resultado antes de dar el siguiente paso. Las decisiones son mías y las justifico con los datos de la investigación (referentes, entrevistas P1 y P2, personas). Por eso cada entrada recoge **qué le pedí**, **qué plan propuso**, **qué decidí con el plan delante**, **qué conservé** y **qué cambié y por qué**.
+
+---
+
+# CHANGELOG de uso de IA — Órbita 2: "Diseñar para que se entienda"
+
+## 2026-11-07 · Paso 2: sección «Wireframes rediseñados» y rediseño del happy path
+
+- **Qué le pedí:** crear dentro de la pestaña `Orbita 2 :p` una sección de wireframes rediseñados, duplicar ahí las pantallas del happy path móvil (Inicio de sesión, Panel de tareas, Nueva tarea, Detalle de tarea y Calendario) sin tocar nada de la página 💡 Wireframes, y aplicar el rediseño. Le pasé por escrito mis cinco propuestas de cambios y **elegí aplicar las cinco propuestas completas**.
+- **Plan que propuso:** clonar las 5 pantallas del flujo «Happy path» dentro de la sección (los clones se desenchufan de las reacciones para que el prototipo original no se mueva), dejar bajo cada una una nota «Qué cambia y por qué», y responder en cada pantalla a las preguntas del Paso 2: jerarquía, agrupación, patrones confusos, elementos pulsables e información que no dependa solo del color.
+- **Qué cambié (por pantalla):**
+  - *Inicio de sesión*: el formulario sube a la parte alta (lo primero que se veía era un hueco vacío), «Crear una cuenta nueva» queda agrupado justo bajo el único botón y «Entrar» pasa a botón relleno como acción primaria.
+  - *Panel de tareas*: la «X» de cada tarjeta era el menú de opciones y se leía como borrar → pasa a «⋮», y la «X» de la cabecera pasa a «☰»; «+ Nueva tarea» es la única acción primaria rellena y sigue abajo, al alcance del pulgar; cada tarjeta añade responsable · categoría · hora límite para saber «quién toca qué» sin abrirla; la barra de progreso pasa a texto «2 de 5 completadas»; el menú inferior se queda en Tareas, Calendario y Grupo, **sin «Chat»** (decisión de la Órbita 1: el chat queda fuera del MVP porque competiría con WhatsApp).
+  - *Nueva tarea*: «Fecha» y «Hora» comparten fila (se rellenan juntas y ahorran una fila), el campo «Responsable» gana «▾» para que se lea como desplegable, se quita la «X» de la cabecera (ya está «←») y «Guardar tarea» pasa a primaria rellena.
+  - *Detalle de tarea*: «Marcar como hecha» queda como primaria rellena y «Editar» baja a botón de texto secundario (los dos se veían iguales, el patrón engañoso que avisa el enunciado), la «X» del bloque pasa a «⋮» y la cabecera se queda sin «X».
+  - *Calendario*: las flechas ← → ganan botones de 44 × 44, las celdas de día pasan de 40 × 40 a 44 × 44, la celda de hoy muestra «HOY» escrito además del número (el «15» salía cortado y solo se distinguía por el relleno oscuro, o sea, solo por el color), más «⋮» en las tarjetas y menú sin «Chat».
+- **Qué conservé:** la página 💡 Wireframes intacta (23 elementos, mismo contenido y los mismos 8 flujos de inicio), los componentes maestros, los dos mockups previos y el inventario del Paso 1. Todo el rediseño vive solo en las copias de la pestaña `Orbita 2 :p`.
+- **Cómo lo justifico (auditoría oral):** cada nota de la sección enumera el cambio y su motivo anclado en persona o principio: P1 «procrastino hasta que son estrictamente urgentes», P2 «si no hay un registro claro en mi calendario, se me pasan», el objetivo táctil de 44 × 44 y el «nada de información solo por color o forma».
+- **Incidencias:** el filtro para reubicar los números del calendario no los detectó y quedaron desalineados con sus celdas (se corrigieron por id); el glifo «⋮» salía casi invisible en el gris claro de plantilla (se oscureció en las 7 tarjetas).
+- **Pendiente:** sistema de color (Paso 3), tipografía (Paso 4), espaciado y retícula (Paso 5), iconos y componentes (Paso 6 y 7) y mockups (Paso 8).
+
+---
+
+## 2026-11-07 · Paso 1: inventario de decisiones y límites de trabajo en el archivo
+
+- **Qué le pedí:** que leyera el enunciado de la Órbita 2 y el archivo de Figma, y que empezara por el Paso 1 avanzando por orden; más adelante le pedí explícitamente que **no cambiara nada de lo que ya hay en el archivo** y que solo trabajara dentro de la pestaña `Orbita 2 :p`.
+- **Qué propuso / devolvió:** primero propuso reorganizar el archivo en las cinco páginas del enunciado (portada, guía de estilo, componentes, wireframes, mockups) —renombró dos páginas, creó dos y las reordenó—; después elaboró un **inventario de 33 decisiones visuales** con su token semántico en inglés (bloques de color, tipografía, espaciado, radio y elevación) a partir del wireframe «Panel de tareas» (móvil, 360 × 800).
+- **Qué conservé:** el inventario de decisiones, que es justo lo que pide el Paso 1, y el borrador de tokens que yo tenía escrito en la pestaña (ahora está dentro del propio inventario). Los dos mockups previos y el borrador se quedaron **en su posición exacta**.
+- **Qué cambié y por qué:** a mi petición, revirtió todo lo que había tocado fuera de la pestaña (nombres y orden de páginas, las dos páginas creadas y las secciones), de modo que el archivo vuelve a tener las mismas 8 páginas que al empezar; el inventario se quedó dentro de la pestaña `Orbita 2 :p`, junto a los mockups, en lugar de la página de wireframes. Motivo: quiero decidir yo la organización global del archivo.
+- **Pendiente:** la organización en las cinco páginas que pide el enunciado (la dejo yo); rediseño de wireframes (Paso 2), sistema de color (Paso 3) y el resto de pasos.
 
 ---
 
 ## 2026-10-18 · Affinity mapping de las entrevistas y cierre de las decisiones del Paso 5
 
-- **Qué le pedí:** que partiera de las entrevistas reales P1 y P2 que ya estaban en el
-  tablero, hiciera el affinity mapping con ellas y cerrara y eliminara las cuestiones
-  pendientes del Paso 5.
-- **Plan que propuso:** seis grupos de citas literales (amarillo = P1, azul = P2), cada uno
-  con su implicación de producto en verde; la nota «PENDIENTE: transcribir» pasaba a
-  «HECHO» apuntando a las fichas donde están las respuestas; y las cuatro cuestiones del
-  flujo se resolvían citando la frase de la entrevista que las respalda, dejándolas en
-  verde y quitando la palabra «pendientes» del título de la zona.
-- **Qué decidí:** resolver que el aviso de vencimiento vive dentro de la app (no como
-  notificación push), que la semana del calendario empieza en lunes y se enseña el día
-  concreto, y que el chat sigue fuera del MVP; las cuatro decisiones quedan anotadas en la
-  zona «Decisiones tomadas al recorrer el flujo».
-- **Qué conservé:** las fichas de personas y las transcripciones de las entrevistas (no se
-  tocaron), el resto de zonas del tablero, los wireframes, el prototipo y el brief.
-- **Qué cambié y por qué:** con las respuestas reales ya no procedía dejar decisiones
-  «pendientes hasta las entrevistas»: cada una se cerró con la cita literal que la
-  respalda —P1 «procrastino hasta que son estrictamente urgentes», P2 «si no hay un
-  registro claro en mi calendario, se me pasan», P1 «una buena organización visual me
-  evitaría discusiones», P2 «fácil de consultar en conexiones lentas»—. El brief pasó de
-  borrador a cerrado con el mismo contraste.
-- **Pendiente:** anotar en las fichas el consentimiento y el formato de cada entrevista;
-  prueba en Lyssna con 4–5 personas (sube el C5 a 10); crear el repositorio de GitHub.
+- **Qué le pedí:** que partiera de las entrevistas reales P1 y P2 que ya teníamos pegadas en el tablero, montara el affinity mapping con ellas y nos quitáramos de encima las cuestiones pendientes del Paso 5.
+- **Plan que propuso:** agrupar las citas en seis bloques (amarillo = P1, azul = P2), añadiendo a cada uno su implicación de producto en verde; cambiar la nota de «PENDIENTE: transcribir» a «HECHO» apuntando a las fichas con las respuestas; y resolver las cuatro dudas del flujo citando la frase literal que las respalda, dejándolas en verde y limpiando la palabra «pendientes» del título de la zona.
+- **Qué decidí:** cerrar que el aviso de vencimiento va dentro de la app (nada de notificaciones push de momento), que la semana del calendario empieza en lunes enseñando el día concreto, y que el chat se queda fuera del MVP. Anoté las cuatro decisiones en la zona de «Decisiones tomadas al recorrer el flujo».
+- **Qué conservé:** las fichas de las personas y las transcripciones de las entrevistas, que no se tocaron para nada.
+- **Qué cambié y por qué:** teniendo las respuestas reales ya no tenía sentido dejar decisiones «pendientes hasta las entrevistas»: cada una se cerró con su cita respaldada —P1 «procrastino hasta que son estrictamente urgentes», P2 «si no hay un registro claro en mi calendario, se me pasan», P1 «una buena organización visual me evitaría discusiones», P2 «fácil de consultar en conexiones lentas»—. El brief pasó de borrador a cerrado con ese mismo enfoque.
+- **Pendiente:** anotar en las fichas el consentimiento y el formato de cada entrevista; hacer el test en Lyssna con 4–5 personas (para subir el C5 a 10); y crear el repo de GitHub.
 
 ---
 
 ## 2026-10-18 · Alta por invitación: se quita el código del piso
 
-- **Qué le pedí:** que el inicio de sesión ya no metiera a la persona dentro de un grupo,
-  y que hubiera una pantalla de creación de grupo desde la que invitar a los demás por su
-  nombre de usuario (el identificador). Ante la duda entre invitación directa o con
-  aceptación, preguntó por las dos opciones y **elegí invitación con aceptación**.
-- **Plan que propuso:** «Inicio de sesión» pasa a pedir nombre de usuario y contraseña;
-  «Creación de cuenta» gana el campo de nombre de usuario; «Creación de grupo» sustituye
-  el bloque del código por un campo «Invitar por nombre de usuario» con su botón y una
-  lista de invitados pendientes; pantalla nueva «Invitaciones» en móvil (360 × 800) y en
-  desktop (1280 × 800) con la invitación pendiente de aceptar o rechazar; reenchufes del
-  prototipo (56 reacciones, sin destinos inválidos); y en FigJam el user flow, el sitemap,
-  el MVP (función 1 reescrita) y los recorridos por persona actualizados.
-- **Qué decidí:** que «Invitaciones» sea el punto de paso obligatorio de quien no tiene
-  piso y vaya sin menú, como el resto del alta; que el fundador siga siendo quien crea la
-  cuenta; y que la lista de invitados pendientes se vea en la propia «Creación de grupo».
-- **Qué conservé:** las personas, los referentes, las entrevistas, las demás funciones del
-  MVP, la restricción ambiental de 450 KB, los 8 flujos de inicio y el resto de decisiones.
-- **Qué cambié y por qué:** el alta dejó de ser por código de piso para ser por cuenta e
-  invitación. El motivo es que un código compartido en el grupo de WhatsApp permite entrar
-  a cualquiera que lo vea y no identifica a cada persona, justo lo que el panel de reparto
-  necesita; con el nombre de usuario como identificador, el fundador elige a quién invita
-  y la persona invitada acepta o rechaza.
-- **Incidencia resuelta:** varios clones de elementos cayeron fuera de su frame (en la
-  página «Cover» o en la raíz de la página de wireframes) y se recolocaron dentro de sus
-  pantallas en ambos tamaños; el prototipo se volvió a validar.
+- **Qué le pedí:** ajustar el inicio de sesión para que no te metiera directamente en un grupo por defecto, y meter una pantalla de creación de grupo para invitar a la gente por su nombre de usuario (el ID). Como dudaba entre invitación directa o con confirmación, me preguntó y **elegí invitación con aceptación**.
+- **Plan que propuso:** «Inicio de sesión» pasa a pedir usuario y contraseña; «Creación de cuenta» gana el campo de username; «Creación de grupo» cambia el bloque del código por un campo «Invitar por nombre de usuario» con su botón y una lista de invitados pendientes; pantalla nueva de «Invitaciones» en móvil (360 × 800) y en desktop (1280 × 800) para aceptar o rechazar; reenchufar las conexiones del prototipo (56 reacciones en total, sin dejar endpoints rotos); y actualizar en FigJam el user flow, el sitemap, el MVP (reescribiendo la función 1) y los recorridos por persona.
+- **Qué decidí:** que la pantalla de «Invitaciones» fuera paso obligatorio si no tienes piso (y sin menú inferior, como el resto del onboarding); que el creador del piso actúe como fundador; y que la lista de invitados pendientes se vea directamente en «Creación de grupo».
+- **Qué conservé:** las personas, los referentes, las entrevistas, las demás funciones del MVP, el presupuesto de carga de 450 KB, los 8 flujos de inicio y el resto de decisiones tomadas.
+- **Qué cambié y por qué:** cambiamos el alta por código de piso a un sistema de cuenta e invitación. El motivo es técnico y de UX: un código suelto por WhatsApp lo puede usar cualquiera y no identifica al usuario, que es justo lo que requiere el panel de reparto; con el username como ID, el fundador controla a quién invita y el usuario decide si acepta.
+- **Incidencia resuelta:** un par de clones de componentes cayeron fuera de su frame (se fueron a la página «Cover» y a la raíz de wireframes) y los recolqué en sus pantallas en ambos viewports; volvimos a validar que el prototipo no tuviera saltos rotos.
 
 ---
 
 ## 2026-10-18 · Wireframes desktop, pantallas de alta y perfiles, y tablero sincronizado
 
-- **Qué le pedí:** primero, completar el wireframe desktop (1280 × 800) que faltaba;
-  después, añadir al user flow una pantalla de creación de cuenta, una de creación de
-  grupo y la posibilidad de ver los perfiles de cada miembro; y por último, editar el
-  tablero de FigJam para que reflejara los cambios.
-- **Plan que propuso:** completar las 8 pantallas desktop en la sección de Samuel y
-  corregir un solape del chat de error en móvil; crear 4 pantallas nuevas en móvil y 4 en
-  desktop («Creación de cuenta», «Creación de grupo», «Ver perfiles», «Perfil de miembro»)
-  con los mismos nombres que el sitemap; devolver la pestaña «Grupo» al menú inferior y a
-  la barra lateral; recolocar los hotspots a 4 ranuras; el prototipo pasó a 110
-  interacciones y 8 flujos de inicio. En FigJam: rama de alta y rama de perfiles en el user
-  flow,4 nodos nuevos en el sitemap con sus colores, y el MVP a6 funcionalidades.
-- **Qué decidí:** que «Ver perfiles» sea una pantalla de lista y «Perfil de miembro» una
-  ficha individual reutilizada para cualquier miembro; que las pantallas de alta vayan sin
-  menú, como el inicio de sesión; y que el «6. Chat grupal» que había quedado a medio
-  escribir en el MVP se completara como «6. Ver perfiles» (el chat se queda fuera).
-- **Qué conservé:** las personas, las entrevistas, los referentes y la privacidad; los
-  textos de las funciones 2 a 5 del MVP se dejaron literales.
-- **Qué cambié y por qué:** pedí expresamente que el flujo incluyera alta y perfiles;
-  como el enunciado encadena flujo → sitemap → wireframes, los cambios se propagaron a las
-  tres piezas y al brief para que la rúbrica no quede huérfana.
-- **Nota sobre la decisión «quién crea el piso»:** la propuso la IA como cierre de un
-  callejón del flujo y la adopté porque responde a un hueco real: sin un fundador
-  definido, nadie reparte la primera tarea.
+- **Qué le pedí:** primero, rematar el wireframe desktop (1280 × 800) que faltaba; después, meter en el user flow las pantallas de creación de cuenta, creación de grupo y la vista de perfiles de miembros; y por último, sincronizar el tablero de FigJam para que cuadrara todo.
+- **Plan que propuso:** completar las 8 pantallas desktop en la sección de Samuel y arreglar un solape con el snackbar de error en móvil; crear 4 pantallas nuevas en móvil y 4 en desktop («Creación de cuenta», «Creación de grupo», «Ver perfiles», «Perfil de miembro») respetando la nomenclatura del sitemap; devolver la pestaña «Grupo» al menú inferior y a la sidebar; recolocar los hotspots a 4 slots; el prototipo subió a 110 interacciones y 8 flujos de inicio. En FigJam: añadir las ramas de alta y perfiles al user flow, 4 nodos nuevos con sus colores al sitemap, y actualizar el MVP a 6 funciones.
+- **Qué decidí:** que «Ver perfiles» sea una vista de lista y «Perfil de miembro» una ficha individual genérica reutilizable; que el alta vaya sin menú de navegación (igual que el login); y que el bloque «6. Chat grupal» que estaba a medias en el MVP se sustituyera por «6. Ver perfiles» (dejando fuera el chat).
+- **Qué conservé:** las personas, las entrevistas, los referentes y los temas de privacidad; los textos de las funciones 2 a 5 del MVP se quedaron tal cual.
+- **Qué cambié y por qué:** forcé a que el flujo cubriera el alta completa y la gestión de perfiles; como la rúbrica exige la trazabilidad flujo → sitemap → wireframes, propagué los cambios a todos los entregables y al brief para no dejar nada descolgado.
+- **Nota sobre la decisión «quién crea el piso»:** la propuso la IA para cerrar un deadlock del flujo y la acepté porque soluciona un problema real de lógica: si no hay un rol fundador que inicialice el grupo, la primera tarea se queda sin asignar.
 
 ---
 
 ## 2026-10-18 · Auditoría frente al enunciado y correcciones en ambos archivos
 
-- **Qué le pedí:** que revisara los8 pasos del enunciado y proponga lo necesario en el
-  tablero y en Figma Design para cumplir los criterios de la rúbrica.
-- **Plan que propuso:** en Figma Design, comprobación de las 31 interacciones (todas con
-  destino válido), quitar la pestaña «Grupo» del menú inferior —no tenía pantalla ni
-  hotspot: era un callejón sin salida— y recolocar los hotspots a 3 ranuras; reconstruir
-  el Calendario como vista de semana (del 13 al 19). En FigJam: diagrama «User flow
-  principal (MVP completo)» con punto de entrada, happy path y 2 casos límite; zona de
-  «Decisiones pendientes» (4 stickies); zona de «Evidencia» con plantilla; sitemap
-  dibujado como árbol de 3 niveles con colores y leyenda; zonas reordenadas por número de
-  paso. En el repo: BRIEF.md reestructurado con los 5 elementos y la restricción
-  ambiental de 450 KB (criterio 2.4 WSG).
-- **Qué decidí:** aplicarlo tal cual en lo que chocaba con el enunciado (menú sin
-  callejones, calendario semanal, árbol del sitemap) y conservar todo lo demás.
-- **Qué conservé:** todo el contenido propio del tablero (fichas, cuestionario, zonas del
-  Paso 1, textos del sitemap), salvo los ajustes estrictamente necesarios.
-- **Qué cambió y por qué:** alcance de pantallas («Grupo» fuera del menú; Calendario de
-  mensual a semanal) y orden espacial de las zonas. El motivo es que el enunciado exige un
-  único user flow con casos límite y decisiones anotadas, un sitemap de hasta 3 niveles,
-  un prototipo sin callejones y un BRIEF con 5 elementos.
-- **Pendiente (ya resuelto):** crear el repositorio de GitHub y subir los tres archivos;
-  las entrevistas del Paso 3 —se hicieron el 18/10 y están en el tablero—.
+- **Qué le pedí:** revisar los 8 pasos de la práctica punto por punto y proponerme lo necesario en FigJam y Figma Design para cumplir la rúbrica al 100%.
+- **Plan que propuso:** en Figma Design, auditar las 31 interacciones (comprobando que todas tuvieran un target válido), quitar la pestaña «Grupo» del menú inferior (era un callejón sin salida sin screen asociada) y reajustar los hotspots a 3 ranuras; rehacer el Calendario como vista semanal (del 13 al 19). En FigJam: ordenar el diagrama «User flow principal (MVP completo)» marcando entrada, happy path y 2 edge cases; crear zona de «Decisiones pendientes» (4 stickies); zona de «Evidencia» con plantilla; dibujar el sitemap como un árbol de 3 niveles con leyenda de colores; y reordenar las zonas del tablero por número de paso. En el repo: reestructurar el `BRIEF.md` con los 5 puntos clave y la restricción de peso de 450 KB (criterio 2.4 WSG).
+- **Qué decidí:** aplicar los cambios en todo lo que chocaba con el enunciado (menú sin deadlocks, calendario semanal y árbol del sitemap) y mantener el resto intacto.
+- **Qué conservé:** el contenido del tablero (fichas, cuestionarios, zonas del Paso 1, textos del sitemap), salvo los ajustes de estructura indispensables.
+- **Qué cambió y por qué:** el scope de pantallas (se quitó «Grupo» del menú y el Calendario pasó de vista mensual a semanal) y la disposición de las zonas en el canvas. El motivo es que las especificaciones piden un único user flow con edge cases y decisiones documentadas, un sitemap de máximo 3 niveles, un prototipo navegable sin puntos ciegos y un `BRIEF.md` bien estructurado.
+- **Pendiente (ya resuelto):** crear el repositorio de GitHub y subir los archivos; las entrevistas del Paso 3 ya están subidas y transcritas en el tablero desde el 18/10.
 
 ---
 
 ## 2026-10-18 · Recorte del MVP y user flows de las personas
 
-- **Qué le pedí:** que recortara el MVP y dibujara el happy path y el user flow de Álex y
-  de Samuel dentro del tablero.
-- **Plan que propuso:** de7 bloques a5 funcionalidades (entrar, crear y asignar, panel con
-  % semanal, avisos automáticos, calendario de la semana), cada una con su motivo, más 5
-  descartes con motivo; nota en la zona del sitemap sobre los caminos que se construyen
-  primero; y dos diagramas —«User flow · Álex (happy path)» y «User flow · Samuel (happy
-  path)»— con flecha gruesa en el camino feliz y discontinua en las ramas.
-- **Qué decidí:** aprobar el recorte, pero dejando el MVP original y la tabla DENTRO/FUERA
-  visibles como decisión previa, y anotar que si las entrevistas aportaban evidencia de
-  que el chat es imprescindible se revierte.
-- **Qué conservé:** el MVP de 7 bloques y la tabla originales; los wireframes y el
-  prototipo no se tocaron.
-- **Qué cambió y por qué:** el chat pasa a ser «avisos automáticos del sistema» y el
-  calendario mensual a iteración 2. El motivo sale del Paso 2: el chat compite con
-  WhatsApp y las apps de este tipo se caen si un compañero no entra; con las preguntas del
-  tablero, chat y calendario mensual no son imprescindibles para la tarea más importante
-  de Álex y Samuel. **Resuelto el 18/10:** las entrevistas confirmaron la decisión —P1
-  quiere «evitar discusiones» y P2 echa en falta «un registro claro», no conversación—.
-- **Incidencia resuelta:** se corrigió un carácter erróneo introducido en el subtítulo de
-  la zona MVP recortado.
+- **Qué le pedí:** recortar el alcance del MVP y dejar dibujados dentro del tablero el happy path general y los user flows específicos para Álex y Samuel.
+- **Plan que propuso:** pasar de 7 bloques a 5 funcionalidades clave (login, crear/asignar tarea, dashboard con % semanal, alertas del sistema y calendario semanal), justificando cada una y añadiendo 5 descartes argumentados; meter una nota en el sitemap indicando las rutas prioritarias; y crear dos diagramas —«User flow · Álex (happy path)» y «User flow · Samuel (happy path)»— marcando el camino principal con línea continua y las ramas alternativas con discontinua.
+- **Qué decidí:** aceptar el tijeretazo del MVP, pero dejando visible el MVP original de 7 bloques y la tabla DENTRO/FUERA como histórico de decisiones, anotando que si las entrevistas pedían chat a gritos, se daría marcha atrás.
+- **Qué conservé:** la tabla DENTRO/FUERA y el MVP inicial de 7 bloques; wireframes y prototipo se quedaron como estaban.
+- **Qué cambió y por qué:** el chat pasa a ser "notificaciones automáticas del sistema" y el calendario mensual se mueve al backlog de la iteración 2. La razón viene del Paso 2: meter un chat es competir contra WhatsApp (donde ya están los grupos del piso) y estas apps mueren si la gente no entra a hablar; analizando las necesidades del tablero, ni el chat ni la vista mensual son bloqueantes para el objetivo principal de Álex y Samuel. **Confirmado el 18/10:** las entrevistas respaldaron la decisión —P1 busca «evitar discusiones» y P2 pide «un registro claro», no otra app de mensajería.
+- **Incidencia resuelta:** corregí un typo que se metió en el subtítulo de la zona del MVP recortado.
 
 ---
 
 ## 2026-10-18 · Opinión crítica sobre el tablero de FigJam existente
 
-- **Qué le pedí:** su opinión sobre el tablero «Planificador Proyecto» con la hipótesis,
-  las personas y el MVP.
-- **Plan que propuso:** un análisis con puntos fuertes (historia idea → problema →
-  personas → MVP coherente; priorización con tabla DENTRO/FUERA) y puntos débiles: MVP de
-  7 bloques con posible sesgo de confirmación; una decisión de público sin resolver (piso
-  de jóvenes frente a familias); faltaban entrevistas, métricas, flujos y higiene del
-  tablero (conectores sueltos, bloque de texto de 4.128 px, personas pegadas como imagen).
-- **Qué decidí:** no aplicar nada de ese análisis todavía. Lo dejé anotado como propuesta
-  pendiente de decisión mía tras las entrevistas.
-- **Qué conservé:** el diagnóstico completo, especialmente el recorte del MVP y la
-  decisión de un solo segmento de público.
-- **Qué cambié y por qué:** nada en esa sesión. El motivo: el criterio de auditoría oral
-  exige que cada decisión remita a la investigación; adoptar sugerencias sin datos la
-  dejaría sin justificar. La decisión se tomó después, en el Paso 5, con los datos en la
-  mano.
+- **Qué le pedí:** un Code Review / UX Review del tablero «Planificador Proyecto» analizando la hipótesis, las personas y la definición del MVP.
+- **Plan que propuso:** un desglose con pros (buen hilo conductor idea → problema → personas → MVP; buena priorización con la matriz DENTRO/FUERA) y contras: MVP de 7 bloques con riesgo de sesgo de confirmación; ambigüedad en el target (¿estudiantes en piso compartido o familias?); falta de entrevistas, métricas y refactorización del canvas (connectors sueltos, un text box gigante de 4.128 px y las personas pegadas como imagen sin formatear).
+- **Qué decidí:** congelar las propuestas por el momento y dejarlas anotadas como backlog pendiente para cuando tuviéramos los datos de las entrevistas.
+- **Qué conservé:** el análisis de la IA guardado como referencia, sobre todo el recorte del MVP y la focalización en un único user persona (estudiantes).
+- **Qué cambié y por me dio por cambiar:** nada en esta sesión. La razón: de cara a la defensa del proyecto, cada decisión tiene que estar respaldada por investigación con usuarios; aplicar sugerencias a ciegas nos dejaba sin justificación metodológica. La decisión se tomó más adelante, en el Paso 5, con los datos reales.
 
 ---
 
 ## 2026-10-18 · Lectura del enunciado y planificación de la órbita
 
-- **Qué le pedí:** que leyera el enunciado del proyecto (8 pasos, entregables y rúbrica)
-  y propusiera un plan de trabajo.
-- **Plan que propuso:** un plan alineado con los 8 pasos y con los criterios C1–C8.
-- **Qué decidí:** seguir ese orden de pasos (hipótesis → referentes → entrevistas →
-  personas → MVP y user flow → sitemap → wireframes y prototipo → brief) y crear el
-  CHANGELOG para anotar desde el primer día.
-- **Qué conservó del enunciado:** todo; no se modificó nada de lo pedido.
-- **Qué cambié y por qué:** nada del enunciado; solo se adaptó el contenido existente del
-  tablero al orden que pide la ruta (empezaba por personas y MVP, y faltaban los Pasos 1 y
-  2). El motivo: el enunciado indica «respeta el orden, porque cada paso utiliza lo que has
-  obtenido en el anterior».
-
----
-
-## 2026-10-18 · Trabajo sobre el tablero de FigJam (zonas por pasos)
-
-- **Qué le pedí:** que trabajara a partir del enunciado, avanzando el proyecto en el
-  tablero, organizándolo por pasos.
-- **Plan que propuso:** nuevas zonas y estructura —zona «Paso 1 · Hipótesis» con borrador y
-  sticky rosa de la decisión de segmento; zona «Paso 2 · Referentes» con el análisis de
-  Flatify, Tody y OurHome y los hallazgos comunes (fuentes: webs oficiales, OCU, reseñas y
-  comparativas, consulta el 18/10/2026); zona «Paso 3 · Entrevistas» con guion de 9
-  preguntas abiertas, plantilla de consentimiento y plantilla de transcripción anonimizada;
-  renombrado de las zonas con su número de paso; reconexión de dos conectores que apuntaban
-  al vacío; y una sticky rosa «revisar tras las entrevistas» en Personas.
-- **Qué decidí:** mantener las fichas de personas como estaban hasta tener entrevistas, y
-  usar la plantilla de consentimiento y de transcripción para las conversaciones.
-- **Qué conservé:** todo el contenido previo del tablero (ideas, stickies, personas, tabla
-  DENTRO/FUERA); solo se renombraron zonas y se repararon conectores. Las personas no se
-  modificaron.
-- **Qué cambió y por qué:** la estructura del tablero, para cumplir el criterio C7 (zonas
-  ordenadas según los pasos del proyecto, cada una con su título); sin los Pasos 2 y 3,
-  personas y MVP no tenían evidencia que los respaldara.
-- **Nota de trazabilidad:** el borrador de la hipótesis y el análisis de referentes eran
-  propuestas de IA con sus fuentes indicadas; los contrasté con las entrevistas y el
-  borrador se cerró en el brief el 18/10.
-- **Pendiente (ya resuelto):** realizar las entrevistas con personas reales —se hicieron
-  el 18/10—.
+- **Qué le pedí:** analizar el enunciado del proyecto (los 8 pasos, los deliverables y la rúbrica de evaluación) y trazar la hoja de ruta.
+- **Plan que propuso:** una planificación por fases alineada con los 8 pasos del enunciado y orientada a cubrir los criterios C1 a C8.
+- **Qué decidí:** seguir el flujo de trabajo propuesto (hipótesis → referentes → entrevistas → personas → MVP y user flow → sitemap → wireframes y prototipo → brief) y crear este `CHANGELOG.md` para documentar el proceso desde el día 1.
+- **Qué conservó del enunciado:** la estructura estricta, no se tocó ninguna especificación.
+- **Qué cambié y por qué:** nada del enunciado original; solo adaptamos el material que ya teníamos en el tablero al orden lógico que pide la guía (ya que habíamos empezado la casa por el tejado con personas y MVP, saltándonos los Pasos 1 y 2). El motivo: las instrucciones dejan claro que hay que respetar la secuencia porque cada fase consume los inputs de la anterior.
 
 ---
 
 ## 2026-10-18 · Pasos 6 y 7: sitemap, wireframes y prototipo
 
-- **Qué le pedí:** dibujar los wireframes de baja fidelidad por pantalla (happy path +
-  estados importantes) y montar el prototipo navegable en la plantilla de Figma Design
-  compartida, con los elementos repetidos convertidos en componentes.
-- **Plan que propuso:** en la página «💡 Wireframes» de la plantilla —4 componentes
-  reutilizables (Cabecera, Menú inferior, Tarjeta de tarea, Botón primario); una Plantilla
-  de pantalla (360 × 800, el móvil de Álex);8 frames de wireframe en blanco, negro y gris
-  medio con los nombres del sitemap;31 interacciones ON_CLICK y3 flujos de inicio (Happy
-  path, Piso nuevo, Error de envío); y la zona «Paso 6 · Sitemap» en el tablero con los
-  mismos nombres.
-- **Qué decidí:** definir primero el sitemap para poder nombrar los frames exactamente
-  igual, y usar la plantilla de la comunidad solo como contenedor.
-- **Qué conservé:** la plantilla de la comunidad como contenedor; todos los componentes y
-  pantallas son capas editables creadas para este proyecto.
-- **Qué cambió y por qué:** nada del enunciado. El motivo: el paso exige que cada frame se
-  llame igual que su pantalla en el sitemap y que los elementos repetidos sean componentes,
-  para que un cambio afecte a todas las pantallas a la vez.
-- **Incidencias resueltas:** una pantalla clonada cayó en otra página del archivo (se movió
-  a Wireframes); la API de prototipos exige el campo `actions` (lista) en las reacciones.
-- **Pendiente:** prueba del prototipo en Lyssna con 4–5 personas parecidas a Álex, dándoles
-  una tarea concreta sin explicaciones y anotando dónde se atascan (es lo que lleva el C5
-  al 10).
+- **Qué le pedí:** maquetar los wireframes de baja fidelidad por pantalla (happy path + estados límite) y montar el prototipo interactivo en la plantilla de Figma Design, abstrayendo los elementos recurrentes en componentes.
+- **Plan que propuso:** trabajar sobre la página «💡 Wireframes» —crear 4 componentes reutilizables (Header, Bottom Nav, Task Card y Primary Button); una pantalla base / frame layout (360 × 800, el viewport de Álex); 8 frames de wireframe utilizando escala de grises con el naming exacto del sitemap; 31 interacciones `ON_CLICK` y 3 flows de entrada (Happy path, Piso nuevo y Error de envío); y sincronizar la zona «Paso 6 · Sitemap» en FigJam.
+- **Qué decidí:** estructurar primero el sitemap para tener clara la arquitectura de información y el naming de las pantallas antes de tirar un solo frame en Figma, usando la plantilla compartida solo como workspace.
+- **Qué conservó:** la plantilla base como contenedor; todos los componentes, layouts y pantallas se diseñaron desde cero para el proyecto.
+- **Qué cambió y por qué:** no se modificó nada de los requisitos. Motivo: el criterio exige que cada frame coincida 1:1 con el nodo del sitemap y que la UI use componentes para mantener el principio DRY (si cambias el componente master, se actualiza en todo el prototipo).
+- **Incidencias resueltas:** al clonar una pantalla se fue a otra página del archivo (se volvió a mover a Wireframes); además, la API del motor de prototipos de Figma requería pasar un array en la propiedad `actions` de las reacciones.
+- **Pendiente:** lanzar test de usabilidad en Lyssna con 4–5 usuarios con perfil similar a Álex, planteando una task directa sin guiarlos para detectar puntos de fricción (necesario para rascar la nota máxima en el C5).

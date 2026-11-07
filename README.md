@@ -14,8 +14,10 @@ sin discutir por quién toca cada cosa.
 | Archivo de Figma Design (wireframes) | [Plantilla · página Wireframes](https://www.figma.com/design/QX5iyAm2XAjWIZJy5VUftF/Plantilla-para-iniciar-proyectos--Community-?node-id=4-6) |
 | Prototipo en modo presentación | [Flujo "Happy path"](https://www.figma.com/design/QX5iyAm2XAjWIZJy5VUftF/Plantilla-para-iniciar-proyectos--Community-?node-id=537-43) —8 flujos en total: happy path, piso nuevo (estado vacío), error de envío y alta de cuenta y grupo, en móvil y desktop |
 | Registro de uso de IA | [CHANGELOG.md](CHANGELOG.md) |
+| Resumen de la entrega de la Órbita 2 | [ORBITA2.md](ORBITA2.md) |
 
 ## Estructura del repositorio
 
 - `BRIEF.md` — brief del proyecto (los cinco elementos del Paso 8).
 - `CHANGELOG.md` — registro de cada uso de IA durante la órbita (criterio C8).
+- `ORBITA2.md` — resumen de la entrega de la Órbita 2 (sistema visual).
