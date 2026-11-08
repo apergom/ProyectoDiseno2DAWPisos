@@ -1,8 +1,38 @@
-# CHANGELOG de uso de IA — Órbita 1: "Diseñar para que funcione"
+# CHANGELOG de uso de IA — Órbita 1: "Diseñar para que funcione" · Órbita 2: sistema visual
 
 Registro de cada uso de IA durante el proyecto, según exige el criterio C8 de la rúbrica.
 
 **Modo de uso: IA en modo plan.** A la IA no se le encargó el proyecto: en cada paso le pedí un plan —qué cambiar, dónde y cómo— y fui siguiendo sus indicaciones sobre el tablero de FigJam y el archivo de Figma Design, revisando cada resultado antes de dar el siguiente paso. Las decisiones son mías y las justifico con los datos de la investigación (referentes, entrevistas P1 y P2, personas). Por eso cada entrada recoge **qué le pedí**, **qué plan propuso**, **qué decidí con el plan delante**, **qué conservé** y **qué cambié y por qué**.
+
+---
+
+## 2026-11-08 · Órbita 2: informe del sistema visual rellenado desde el archivo de Figma
+
+- **Qué le pedí:** rellenar la plantilla del informe «Órbita 2: sistema visual» con el contenido real del archivo de Figma de la entrega —tablas de tokens y de contraste, tipografía, espaciado y retícula, inventario de componentes, notas de rediseño, mockups y lista de comprobación— y subirlo al repo junto con este CHANGELOG actualizado.
+- **Plan que propuso:** extraer de cada página del archivo los datos exactos (los 17 valores de contraste medidos en claro y en oscuro, la escala tipográfica de seis niveles, la retícula de 4 × 76 en móvil y 12 × 76 en desktop, los 15 componentes con sus estados y las 17 notas «qué cambia y por qué»), ubicar cada entregable por página y sección, marcar las nueve casillas de la comprobación con la evidencia de cada punto y redactar el resumen de decisiones, el uso de IA y el pendiente.
+- **Qué decidí:** conservar la estructura exacta de la plantilla (enlaces, dónde está cada cosa, lista de comprobación, resumen de decisiones, uso de IA y pendiente), enlazar el prototipo del happy path con `figma.com/proto/` y declarar Google Stitch como no usado.
+- **Qué conservé:** la plantilla tal cual venía, los nombres de páginas y secciones del archivo de Figma y las cifras tal y como están medidas en la guía de estilo (nada de redondear ni inventar valores).
+- **Qué cambié y por qué:** el título lleva ahora el nombre de la aplicación («Órbita 2: sistema visual de Planificador») y se quitó la línea de instrucciones que traía la plantilla; el informe se guardó como `ORBITA-2.md` para que quede junto al `BRIEF.md` y al `CHANGELOG.md`. El motivo: la entrega tiene que poder leerse sin la plantilla delante y cada dato tiene que poderse comprobar contra el archivo de Figma.
+
+---
+
+## 2026-11-08 · Modo oscuro creado con ayuda de la IA
+
+- **Qué le pedí:** cómo montar el modo oscuro del sistema visual para que todas las pantallas cambien de golpe sin pintarlas una por una, y cómo asegurarme de que no se escapa ningún color.
+- **Plan que propuso:** dar a la colección semánticos dos modos (claro y oscuro) con alias a los primitivos; fijar el modo explícito en un frame de prueba con `setExplicitVariableModeForCollection` —un botón, una tarjeta y un campo— para ver de un vistazo qué no cambia; y medir el contraste de todos los pares de texto en los dos modos antes de dar por bueno el resultado.
+- **Qué decidí:** que el modo oscuro no se resuelve invirtiendo colores: cada token apunta al tono de la escala que mejor funciona en cada modo (primary teal-700 en claro → teal-300 con texto oscuro en oscuro, warning amber-700 → amber-400, secondary índigo oscuro → índigo claro). También decidí que el estado nunca se distinga solo por el tono, porque Samuel tiene deuteranopía.
+- **Qué conservé:** las escalas del Paso 3, la tipografía, el espaciado y todos los wireframes: el oscuro se montó encima del sistema ya existente, no hizo falta rehacerlo.
+- **Qué cambié y por qué:** los valores de los alias modo a modo y cualquier pintura que no estuviera ligada a una variable (la prueba existe justo para cazarlas). El motivo: la app se consulta de día y de noche con la misma información, y todos los textos tienen que cumplir AA en los dos modos —el más bajo medido queda en 5,05:1 en claro y 4,94:1 en oscuro—.
+
+---
+
+## 2026-11-08 · Reorganización de los pasos de la práctica en el archivo de Figma
+
+- **Qué le pedí:** reorganizar el archivo de Figma para que cada uno de los ocho pasos de la práctica tuviera su sitio claro y se pudiera recorrer la entrega sin que nadie la explicara.
+- **Plan que propuso:** crear las cuatro páginas de la entrega —«Guía de estilo», «Componentes», «Wireframes» y «Mockups»— y encuadrar cada entregable con su número de paso (Paso 1 · Inventario de decisiones, Paso 2 · Wireframes rediseñados en móvil y desktop, Pasos 3 a 5 · color, tipografía y espaciado, Paso 6 · inventario de componentes, Paso 7 · variables y estilos, Paso 8 · guía de estilo y mockups), dejando los wireframes originales de la Órbita 1 en su propia sección «sin modificar».
+- **Qué decidí:** separar lo nuevo de lo original: nada de la Órbita 1 se borra ni se mueve de su sección, y el inventario de decisiones del Paso 1 convive con los originales pero identificado con su número de paso.
+- **Qué conservé:** todas las páginas y el contenido originales del archivo (Definition, wireframes originales, Design, Handoff y Graveyard), sin tocarlos.
+- **Qué cambié y por qué:** la disposición de las entregas y los nombres de las secciones y frames, que ahora llevan el número de paso. El motivo: la rúbrica pide que el archivo se pueda recorrer solo; con el paso en el nombre se ve de un vistazo qué salió de cada fase y dónde busca el evaluador cada entregable.
 
 ---
 
