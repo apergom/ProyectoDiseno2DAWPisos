@@ -45,10 +45,10 @@ aunque algunas sigan vacías de momento.
 | --- | --- | --- |
 | Panel de tareas | `index.html` | Lista de tareas de la semana con estado, responsable y hora; barra de progreso «n de m completadas»; buscador por categoría y persona |
 | Detalle de tarea | `detalle.html?id=N` | Ficha completa: título, descripción, categoría, responsable, día, hora y estado |
-| Nueva tarea | `nueva-tarea.html` | Vacía — alta de tarea con validación (Hito 2) |
-| Calendario | `calendario.html` | Vacía — los 7 días de la semana con sus tareas (Hito 3) |
-| Grupo | `grupo.html` | Vacía — miembros del piso y sus perfiles (Hito 3) |
-| Chat | `chat.html` | Vacía — avisos y mensajes del piso (Hito 4) |
+| Nueva tarea | `nueva-tarea.html` | Vacía — alta de tarea con validación |
+| Calendario | `calendario.html` | Vacía — los 7 días de la semana con sus tareas  |
+| Grupo | `grupo.html` | Vacía — miembros del piso y sus perfiles  |
+| Chat | `chat.html` | Vacía — avisos y mensajes del piso  |
 | Landing | `landing.html` | Portada pública: hero, qué hace la app, cómo funciona y llamada a la acción |
 
 ## Estructura del repositorio
