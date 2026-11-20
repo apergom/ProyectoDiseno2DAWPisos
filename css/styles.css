@@ -1,0 +1,310 @@
+/* Planificador — tokens del sistema de diseño de Figma (Órbita 2) */
+
+:root {
+  --color-surface: #f9fbfb;
+  --color-surface-container: #ffffff;
+  --color-on-surface: #1b2123;
+  --color-on-surface-variant: #596669;
+  --color-primary: #187577;
+  --color-on-primary: #ffffff;
+  --color-outline: #75868a;
+  --color-outline-variant: #e1e8ea;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+
+  --radius-4: 4px;
+  --radius-8: 8px;
+  --radius-full: 999px;
+
+  --size-touch: 44px;
+  --sombra-1: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--color-surface);
+  color: var(--color-on-surface);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Cabecera */
+
+.cabecera {
+  background: var(--color-surface-container);
+  border-bottom: 1px solid var(--color-outline-variant);
+  padding: var(--space-3) var(--space-4);
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.cabecera__marca {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.cabecera__volver {
+  min-height: var(--size-touch);
+  min-width: var(--size-touch);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-on-surface);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Contenido */
+
+.contenido {
+  flex: 1;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: var(--space-6) var(--space-4) var(--space-5);
+}
+
+h1 {
+  margin: 0;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.subtitulo {
+  margin: var(--space-1) 0 0;
+  color: var(--color-on-surface-variant);
+  font-size: 14px;
+}
+
+.vacia {
+  color: var(--color-on-surface-variant);
+  font-size: 14px;
+}
+
+/* Barra de progreso */
+
+.progreso {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+
+.progreso__pista {
+  flex: 1;
+  height: 8px;
+  background: var(--color-outline-variant);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.progreso__relleno {
+  height: 8px;
+  background: var(--color-primary);
+  border-radius: var(--radius-full);
+}
+
+.progreso__texto {
+  margin: 0;
+  color: var(--color-on-surface-variant);
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+/* Listado de tareas */
+
+.listado {
+  list-style: none;
+  margin: var(--space-4) 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.tarjeta {
+  background: var(--color-surface-container);
+  border-radius: var(--radius-8);
+  box-shadow: var(--sombra-1);
+}
+
+.tarjeta__enlace {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  min-height: var(--size-touch);
+  padding: var(--space-3) var(--space-4);
+  color: inherit;
+  text-decoration: none;
+}
+
+.tarjeta__casilla {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  border: 1px solid var(--color-outline);
+  border-radius: var(--radius-4);
+  background: var(--color-surface-container);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-on-primary);
+  font-size: 14px;
+}
+
+.tarjeta__casilla--hecha {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.tarjeta__textos {
+  flex: 1;
+  min-width: 0;
+}
+
+.tarjeta__titulo {
+  display: block;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+}
+
+.tarjeta__meta {
+  display: block;
+  color: var(--color-on-surface-variant);
+  font-size: 14px;
+}
+
+.tarjeta--hecha .tarjeta__titulo {
+  color: var(--color-on-surface-variant);
+}
+
+/* Detalle */
+
+.ficha__categoria {
+  margin: 0;
+  color: var(--color-primary);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.ficha__titulo {
+  margin: var(--space-1) 0 0;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.ficha__descripcion {
+  color: var(--color-on-surface-variant);
+}
+
+.ficha__datos {
+  background: var(--color-surface-container);
+  border-radius: var(--radius-8);
+  box-shadow: var(--sombra-1);
+  padding: var(--space-4);
+  margin: var(--space-4) 0;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-2) var(--space-4);
+  font-size: 14px;
+}
+
+.ficha__datos dt {
+  color: var(--color-on-surface-variant);
+}
+
+.ficha__datos dd {
+  margin: 0;
+  font-weight: 700;
+}
+
+.ficha__estado {
+  display: inline-block;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.ficha__estado--pendiente {
+  background: var(--color-outline-variant);
+  color: var(--color-on-surface-variant);
+}
+
+/* Botón */
+
+.boton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 48px;
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  border: none;
+  border-radius: var(--radius-8);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Navegación */
+
+.navegacion {
+  background: var(--color-surface-container);
+  border-top: 1px solid var(--color-outline-variant);
+  position: sticky;
+  bottom: 0;
+}
+
+.navegacion ul {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 640px;
+  display: flex;
+}
+
+.navegacion li {
+  flex: 1;
+}
+
+.navegacion a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--size-touch);
+  padding: var(--space-2);
+  color: var(--color-on-surface-variant);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.navegacion a[aria-current='page'] {
+  color: var(--color-primary);
+  font-weight: 700;
+}
