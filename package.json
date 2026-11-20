@@ -5,7 +5,7 @@
   "type": "module",
   "description": "Planificador de tareas del piso compartido - Hito 1 de 5",
   "scripts": {
-    "lint": "eslint js/"
+    "lint": "eslint ."
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
