@@ -1,14 +1,41 @@
 // Punto de entrada: mira qué página hemos abierto y dibuja su contenido.
 
 import { tareas, categorias } from './datos.js';
-import { pintarListado, pintarFicha, pintarProgreso } from './ui.js';
+import { pintarListado, pintarFicha, pintarProgreso, rellenarFiltros } from './ui.js';
 
 // Página del panel: listado + progreso.
 const listado = document.getElementById('listado');
 
 if (listado) {
+  rellenarFiltros(categorias, tareas);
   pintarListado(listado, tareas, categorias);
   pintarProgreso(tareas);
+
+  const formulario = document.getElementById('filtros');
+
+  // Al enviar el formulario se muestra solo lo que coincida con el filtro.
+  formulario.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const categoria = document.getElementById('filtro-categoria').value;
+    const persona = document.getElementById('filtro-persona').value;
+
+    const tareasFiltradas = tareas.filter(function (tarea) {
+      const coincideCategoria = categoria === '' || tarea.categoriaId === Number(categoria);
+      const coincidePersona = persona === '' || tarea.responsable === persona;
+      return coincideCategoria && coincidePersona;
+    });
+
+    pintarListado(listado, tareasFiltradas, categorias);
+    pintarProgreso(tareasFiltradas);
+  });
+
+  // Botón Limpiar: vuelve a mostrar todas las tareas.
+  document.getElementById('filtro-limpiar').addEventListener('click', function () {
+    formulario.reset();
+    pintarListado(listado, tareas, categorias);
+    pintarProgreso(tareas);
+  });
 }
 
 // Página de detalle: buscamos la tarea por el ?id= de la URL.

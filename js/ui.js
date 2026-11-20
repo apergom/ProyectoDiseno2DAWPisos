@@ -12,6 +12,11 @@ export function nombreCategoria(tarea, categorias) {
 
 // Dibuja la lista de tareas dentro del elemento indicado.
 export function pintarListado(contenedor, tareas, categorias) {
+  if (tareas.length === 0) {
+    contenedor.innerHTML = '<li class="vacia">No hay tareas que coincidan con el filtro.</li>';
+    return;
+  }
+
   let html = '';
 
   for (const tarea of tareas) {
@@ -82,5 +87,32 @@ export function pintarProgreso(tareas) {
   }
   if (resumen) {
     resumen.textContent = 'Semana del 13 al 19 · ' + total + ' tareas';
+  }
+}
+
+// Rellena los desplegables del buscador con las categorías y las personas.
+export function rellenarFiltros(categorias, tareas) {
+  const selectCategoria = document.getElementById('filtro-categoria');
+  const selectPersona = document.getElementById('filtro-persona');
+
+  for (const categoria of categorias) {
+    const opcion = document.createElement('option');
+    opcion.value = String(categoria.id);
+    opcion.textContent = categoria.nombre;
+    selectCategoria.appendChild(opcion);
+  }
+
+  const personas = [];
+  for (const tarea of tareas) {
+    if (!personas.includes(tarea.responsable)) {
+      personas.push(tarea.responsable);
+    }
+  }
+
+  for (const persona of personas) {
+    const opcion = document.createElement('option');
+    opcion.value = persona;
+    opcion.textContent = persona;
+    selectPersona.appendChild(opcion);
   }
 }
