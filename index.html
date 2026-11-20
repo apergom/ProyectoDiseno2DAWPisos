@@ -25,6 +25,23 @@
         <p class="progreso__texto" id="progreso-texto"></p>
       </div>
 
+      <form class="filtros" id="filtros">
+        <div class="campo">
+          <label for="filtro-categoria">Categoría</label>
+          <select id="filtro-categoria" name="categoria">
+            <option value="">Todas</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label for="filtro-persona">Persona</label>
+          <select id="filtro-persona" name="persona">
+            <option value="">Todas</option>
+          </select>
+        </div>
+        <button class="boton filtros__buscar" type="submit">Buscar</button>
+        <button class="filtros__limpiar" id="filtro-limpiar" type="button">Limpiar</button>
+      </form>
+
       <ul class="listado" id="listado"></ul>
 
       <a class="boton" href="nueva-tarea.html">+ Nueva tarea</a>
