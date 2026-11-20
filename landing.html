@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Planificador: la app con la que tu piso reparte las tareas del hogar por turnos y sin discutir.">
+  <title>Planificador — reparte las tareas de tu piso sin discutir</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/landing.css">
+</head>
+<body>
+  <header class="cabecera landing-cabecera">
+    <a class="landing-marca" href="landing.html">
+      <span class="landing-logo" aria-hidden="true">P</span>
+      Planificador
+    </a>
+    <nav class="landing-nav" aria-label="Navegación principal">
+      <ul>
+        <li><a href="#funciones">Qué hace</a></li>
+        <li><a href="#como-funciona">Cómo funciona</a></li>
+      </ul>
+    </nav>
+    <a class="boton boton--cabecera" href="index.html">Abrir la app</a>
+  </header>
+
+  <main class="landing-main">
+    <section class="hero" aria-labelledby="titulo-hero">
+      <div class="hero__textos">
+        <p class="hero__cejilla">Para pisos compartidos</p>
+        <h1 id="titulo-hero">Las tareas del piso, repartidas <span class="marcado">sin discutir</span></h1>
+        <p class="hero__sub">
+          Limpieza, compra y recados por turnos. Cada uno ve qué le toca hoy y el
+          reparte lo ve todo el piso: nada de apuntar en el grupo de WhatsApp.
+        </p>
+        <div class="hero__acciones">
+          <a class="boton" href="index.html">Abrir la app</a>
+          <a class="enlace-flecha" href="#como-funciona">Ver cómo funciona →</a>
+        </div>
+        <p class="hero__dato">Esta semana, del 13 al 19: 12 tareas — 2 hechas, 10 pendientes.</p>
+      </div>
+
+      <div class="mock" aria-hidden="true">
+        <p class="mock__titulo">Tareas de esta semana</p>
+        <p class="mock__meta">Semana del 13 al 19 · 4 tareas</p>
+        <div class="progreso mock__progreso">
+          <div class="progreso__pista">
+            <div class="progreso__relleno"></div>
+          </div>
+          <p class="progreso__texto">2 de 4 completadas</p>
+        </div>
+        <div class="tarjeta">
+          <div class="tarjeta__enlace">
+            <span class="tarjeta__casilla"></span>
+            <span class="tarjeta__textos">
+              <span class="tarjeta__titulo">Fregar los platos</span>
+              <span class="tarjeta__meta">Cocina · Carlos M. · Hoy 18:00</span>
+            </span>
+          </div>
+        </div>
+        <div class="tarjeta tarjeta--hecha">
+          <div class="tarjeta__enlace">
+            <span class="tarjeta__casilla tarjeta__casilla--hecha">✓</span>
+            <span class="tarjeta__textos">
+              <span class="tarjeta__titulo">Comprar detergente</span>
+              <span class="tarjeta__meta">Compra · Lucía R. · Hoy 22:00</span>
+            </span>
+          </div>
+        </div>
+        <p class="mock__nota">así se ve el panel</p>
+      </div>
+    </section>
+
+    <section class="seccion" id="funciones" aria-labelledby="titulo-funciones">
+      <div class="contenedor">
+        <h2 id="titulo-funciones">Qué hace</h2>
+        <p class="seccion__intro">Seis cosas y ninguna más. Esto es lo que hay de momento.</p>
+        <ul class="lista-funciones">
+          <li>
+            <h3>Entra con tu cuenta</h3>
+            <p>Usuario y contraseña. Si es tu primer piso, creas la cuenta y aceptas la invitación.</p>
+          </li>
+          <li>
+            <h3>Qué me toca hoy</h3>
+            <p>El panel te enseña tus tareas de hoy y el porcentaje de la semana, de un vistazo.</p>
+          </li>
+          <li>
+            <h3>Crea y asigna tareas</h3>
+            <p>Nombre, día y responsable. Se guarda y la tarea vuelve al panel del piso.</p>
+          </li>
+          <li>
+            <h3>Avisos automáticos</h3>
+            <p>Si una tarea vence sin marcarse, el sistema avisa a quien le tocaba.</p>
+          </li>
+          <li>
+            <h3>Calendario semanal</h3>
+            <p>Los 7 días de la semana con las tareas de cada uno, en una sola pantalla.</p>
+          </li>
+          <li>
+            <h3>Perfiles del grupo</h3>
+            <p>Cada persona con su ficha y lo que lleva hecho durante la semana.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="seccion seccion--banda" id="como-funciona" aria-labelledby="titulo-como">
+      <div class="contenedor">
+        <h2 id="titulo-como">Cómo funciona</h2>
+        <ol class="pasos">
+          <li class="paso">
+            <span class="paso__numero" aria-hidden="true">1</span>
+            <div>
+              <h3>Entras</h3>
+              <p>Con tu usuario y contraseña. ¿Aún no tienes cuenta? La creas en un minuto.</p>
+            </div>
+          </li>
+          <li class="paso">
+            <span class="paso__numero" aria-hidden="true">2</span>
+            <div>
+              <h3>Ves qué te toca</h3>
+              <p>El panel muestra tus tareas de hoy y lo que vence esta semana.</p>
+            </div>
+          </li>
+          <li class="paso">
+            <span class="paso__numero" aria-hidden="true">3</span>
+            <div>
+              <h3>Marcas y se reparte</h3>
+              <p>Al marcar una tarea como hecha sube el porcentaje de la semana y lo ve todo el piso.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="cta-final" aria-labelledby="titulo-cta">
+      <div class="contenedor">
+        <h2 id="titulo-cta">Entra y reparte la semana</h2>
+        <p>Crea tus tareas, márcalas cuando las hagas y deja de discutir por quién toca cada cosa.</p>
+        <a class="boton cta-final__boton" href="index.html">Abrir la app</a>
+        <p class="nota-final">Sin instalar nada: va en el navegador del móvil.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor pie__caja">
+      <p><strong>Planificador</strong> — las tareas del piso Calle Mayor, sin discutir.</p>
+      <p>Diseño de Interfaces Web · <a href="index.html">Abrir la app</a></p>
+    </div>
+  </footer>
+</body>
+</html>
