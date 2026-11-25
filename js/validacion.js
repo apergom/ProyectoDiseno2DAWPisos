@@ -72,7 +72,7 @@ export function validarContrasena(valor, campo) {
     minimo = campo.minLength;
   }
 
-  // Al editar un usuario la contraseña es opcional: no se guarda nunca.
+  // Al editar un usuario la contraseña es opcional: se guarda solo como hash.
   if (texto === '' && !esObligatorio(campo)) {
     return null;
   }

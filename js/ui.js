@@ -38,8 +38,8 @@ export function pintarListado(contenedor, tareas) {
         <a class="tarjeta__enlace" href="detalle.html?id=${tarea.id}">
           <span class="tarjeta__casilla${claseCasilla}" aria-hidden="true">${marca}</span>
           <span class="tarjeta__textos">
-            <span class="tarjeta__titulo">${tarea.titulo}</span>
-            <span class="tarjeta__meta">${tarea.responsable} · ${tarea.dia} ${tarea.hora}</span>
+            <span class="tarjeta__titulo">${escapar(tarea.titulo)}</span>
+            <span class="tarjeta__meta">${escapar(tarea.responsable)} · ${escapar(tarea.dia)} ${escapar(tarea.hora)}</span>
           </span>
         </a>
       </li>`;
@@ -60,12 +60,12 @@ export function pintarFicha(contenedor, tarea, categorias) {
   const estadoTexto = tarea.estado === 'hecha' ? 'Hecha' : 'Pendiente';
 
   contenedor.innerHTML = `
-    <p class="ficha__categoria">${categoria}</p>
-    <h1 class="ficha__titulo">${tarea.titulo}</h1>
-    <p class="ficha__descripcion">${tarea.descripcion}</p>
+    <p class="ficha__categoria">${escapar(categoria)}</p>
+    <h1 class="ficha__titulo">${escapar(tarea.titulo)}</h1>
+    <p class="ficha__descripcion">${escapar(tarea.descripcion)}</p>
     <dl class="ficha__datos">
-      <dt>Responsable</dt><dd>${tarea.responsable}</dd>
-      <dt>Cuándo</dt><dd>${tarea.dia} a las ${tarea.hora}</dd>
+      <dt>Responsable</dt><dd>${escapar(tarea.responsable)}</dd>
+      <dt>Cuándo</dt><dd>${escapar(tarea.dia)} a las ${escapar(tarea.hora)}</dd>
       <dt>Estado</dt><dd><span class="${estadoClase}">${estadoTexto}</span></dd>
     </dl>
     <a class="boton" href="index.html">← Volver al panel</a>`;

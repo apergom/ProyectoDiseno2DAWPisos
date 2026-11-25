@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Iniciar sesión · Planificador</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/guardia.js"></script>
+</head>
+<body class="app">
+  <header class="cabecera">
+    <a class="cabecera__volver" href="landing.html">Inicio</a>
+    <p class="cabecera__marca">Piso Calle Mayor</p>
+  </header>
+
+  <main class="contenido contenido--formulario">
+    <section aria-labelledby="titulo-login">
+      <h1 id="titulo-login">Iniciar sesión</h1>
+      <p class="subtitulo">Entra con tu cuenta para ver las tareas de tu piso o las tuyas propias.</p>
+
+      <form class="formulario" id="formulario-login" novalidate>
+        <div class="campo">
+          <label for="usuario-login">Nombre de usuario</label>
+          <input
+            id="usuario-login"
+            name="usuario"
+            type="text"
+            required
+            minlength="3"
+            maxlength="20"
+            autocomplete="username"
+            aria-describedby="error-usuario-login">
+          <p class="campo__error" id="error-usuario-login" data-error-para="usuario" aria-live="polite" hidden></p>
+        </div>
+
+        <div class="campo">
+          <label for="contrasena-login">Contraseña</label>
+          <input
+            id="contrasena-login"
+            name="contrasena"
+            type="password"
+            required
+            autocomplete="current-password"
+            aria-describedby="error-contrasena-login">
+          <p class="campo__error" id="error-contrasena-login" data-error-para="contrasena" aria-live="polite" hidden></p>
+        </div>
+
+        <p class="aviso aviso--error" id="error-login" role="alert" hidden></p>
+
+        <button class="boton boton--ancho" type="submit" id="boton-login">Entrar</button>
+      </form>
+
+      <p class="nota" id="nota-sin-cuentas" hidden>Todavía no hay ninguna cuenta. Crea la primera desde <a class="enlace" href="registro.html">Registro</a>.</p>
+
+      <p class="nota">¿No tienes cuenta? <a class="enlace" href="registro.html">Crear una cuenta nueva</a></p>
+
+      <p class="nota">¿Te registraste antes de activar el inicio de sesión? Entra en <a class="enlace" href="registro.html">Registro</a>, edita tu cuenta y asígnale una contraseña.</p>
+    </section>
+  </main>
+
+  <script type="module" src="js/login.js"></script>
+</body>
+</html>

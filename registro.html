@@ -17,6 +17,7 @@
     <section aria-labelledby="titulo-registro">
       <h1 id="titulo-registro">Crear cuenta</h1>
       <p class="subtitulo" id="subtitulo-registro">Crea tu cuenta para tu piso. Después podrás editar estos datos desde la lista.</p>
+      <p class="nota">¿Ya tienes cuenta? <a class="enlace" href="login.html">Iniciar sesión</a></p>
 
       <form class="formulario" id="formulario-usuario" novalidate>
         <input type="hidden" name="id" id="usuario-id">
@@ -58,7 +59,7 @@
             minlength="8"
             autocomplete="new-password"
             aria-describedby="ayuda-contrasena error-contrasena">
-          <p class="campo__ayuda" id="ayuda-contrasena">Mínimo 8 caracteres, una mayúscula y un número. No se guarda en el navegador.</p>
+          <p class="campo__ayuda" id="ayuda-contrasena">Mínimo 8 caracteres, una mayúscula y un número. Se guarda solo un hash, nunca el texto.</p>
           <p class="campo__error" id="error-contrasena" data-error-para="contrasena" aria-live="polite" hidden></p>
         </div>
 
@@ -74,7 +75,7 @@
           <p class="campo__error" id="error-repeticion" data-error-para="repeticion" aria-live="polite" hidden></p>
         </div>
 
-        <p class="nota" id="nota-edicion" hidden>Al editar no se muestran las contraseñas: nunca se guardan en el navegador.</p>
+        <p class="nota" id="nota-edicion" hidden>Opcional: rellena las dos contraseñas solo si quieres cambiarla. Se guarda un hash, nunca el texto.</p>
 
         <div class="campo">
           <label for="fecha-nacimiento">Fecha de nacimiento</label>
@@ -124,6 +125,7 @@
     </ul>
   </nav>
 
+  <script type="module" src="js/sesion.js"></script>
   <script type="module" src="js/usuarios.js"></script>
 </body>
 </html>

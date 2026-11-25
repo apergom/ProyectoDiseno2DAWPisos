@@ -1,5 +1,5 @@
 // Registro y listado de usuarios del piso.
-// El mismo formulario crea y edita; la contraseña nunca se guarda.
+// El mismo formulario crea y edita; la contraseña se guarda solo como hash.
 
 import { obtenerTodos, obtenerPorId, crear, actualizar, borrar } from './almacen.js';
 import {
@@ -12,6 +12,7 @@ import {
   calcularEdad
 } from './validacion.js';
 import { prepararFormulario } from './formulario.js';
+import { hashContrasena } from './contrasena.js';
 import { escapar } from './ui.js';
 
 const formulario = document.getElementById('formulario-usuario');
@@ -29,7 +30,6 @@ function iniciarRegistro() {
   const botonGuardar = document.getElementById('boton-guardar');
   const botonCancelar = document.getElementById('cancelar-edicion');
   const notaEdicion = document.getElementById('nota-edicion');
-  const bloquesContrasena = document.querySelectorAll('.campo--contrasena');
   const idOculto = formulario.elements.id;
   const campoUsuario = formulario.elements.usuario;
   const campoEmail = formulario.elements.email;
@@ -111,7 +111,7 @@ function iniciarRegistro() {
 
   const control = prepararFormulario(formulario, validadores, guardarUsuario);
 
-  function guardarUsuario(datos) {
+  async function guardarUsuario(datos) {
     const id = Number(idOculto.value);
     const ahora = new Date().toISOString();
 
@@ -123,13 +123,23 @@ function iniciarRegistro() {
       actualizadoEl: ahora
     };
 
+    // La contraseña nunca se guarda tal cual: solo su hash.
+    if (datos.contrasena) {
+      try {
+        usuario.contrasenaHash = await hashContrasena(datos.contrasena);
+      } catch {
+        mostrarAviso('No se ha podido procesar la contraseña. Inténtalo de nuevo.');
+        return;
+      }
+    }
+
     if (id) {
       actualizar('usuarios', id, usuario);
-      mostrarAviso('Usuario actualizado. La contraseña no se guarda en el navegador.');
+      mostrarAviso('Usuario actualizado. La contraseña se guarda como hash, nunca como texto.');
     } else {
       usuario.creadoEl = ahora;
       crear('usuarios', usuario);
-      mostrarAviso('Usuario creado. La contraseña no se guarda en el navegador.');
+      mostrarAviso('Usuario creado. La contraseña se guarda como hash, nunca como texto.');
     }
 
     salirDeEdicion();
@@ -153,15 +163,13 @@ function iniciarRegistro() {
     campoRepeticion.value = '';
 
     titulo.textContent = 'Editar usuario';
-    subtitulo.textContent = 'Modifica los datos de la cuenta. La contraseña no se puede mostrar ni guardar.';
+    subtitulo.textContent = 'Modifica los datos de la cuenta. Puedes dejar las contraseñas vacías para no cambiarla.';
 
-    // Al editar no se piden contraseñas: no se guardan.
+    // Al editar, las contraseñas son opcionales: se guarda solo un hash.
     campoContrasena.required = false;
     campoRepeticion.required = false;
-    for (const bloque of bloquesContrasena) {
-      bloque.hidden = true;
-    }
 
+    notaEdicion.textContent = 'Opcional: rellena las dos contraseñas solo si quieres cambiarla. Se guarda un hash, nunca el texto.';
     notaEdicion.hidden = false;
     botonGuardar.textContent = 'Guardar cambios';
     botonCancelar.hidden = false;
@@ -179,9 +187,6 @@ function iniciarRegistro() {
     subtitulo.textContent = 'Crea tu cuenta para tu piso. Después podrás editar estos datos desde la lista.';
     campoContrasena.required = true;
     campoRepeticion.required = true;
-    for (const bloque of bloquesContrasena) {
-      bloque.hidden = false;
-    }
 
     notaEdicion.hidden = true;
     botonGuardar.textContent = 'Crear usuario';

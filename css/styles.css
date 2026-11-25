@@ -109,6 +109,45 @@ body {
   mask: url('../assets/icons/arrow-left.svg') center / contain no-repeat;
 }
 
+/* Cabecera con sesión activa */
+
+.cabecera__sesion {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.cabecera__usuario {
+  font-size: var(--font-size-caption);
+  color: var(--color-on-surface-variant);
+}
+
+.cabecera__salir,
+.cabecera__entrar {
+  min-height: 36px;
+  padding: 0 var(--space-3);
+  border-radius: var(--radius-8);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cabecera__salir {
+  background: transparent;
+  border: 1px solid var(--color-outline);
+  color: var(--color-on-surface);
+}
+
+.cabecera__entrar {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
 /* Contenido */
 
 .contenido {
@@ -595,6 +634,12 @@ h2 {
   font-size: var(--font-size-caption);
 }
 
+.aviso--error {
+  border-color: var(--color-error);
+  background: var(--color-error-surface);
+  color: var(--color-error);
+}
+
 .enlace {
   color: var(--color-primary);
   font-weight: 700;
@@ -632,6 +677,87 @@ h2 {
 .contenido--formulario .subtitulo {
   font-size: var(--font-size-body);
   line-height: var(--line-height-body);
+}
+
+/* Vista de grupo e invitaciones */
+
+.tarjeta--panel {
+  padding: var(--space-5);
+  margin-top: var(--space-4);
+}
+
+.cejilla {
+  margin: 0 0 var(--space-1);
+  color: var(--color-primary);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.tarjeta__subtitulo {
+  margin: var(--space-5) 0 var(--space-2);
+  font-size: var(--font-size-label);
+}
+
+.codigo-grupo {
+  margin-top: var(--space-4);
+  padding: var(--space-4);
+  border: 1px dashed var(--color-primary);
+  border-radius: var(--radius-8);
+  background: var(--color-surface);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.codigo-grupo__etiqueta {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-on-surface-variant);
+}
+
+.codigo-grupo__valor {
+  font-size: 24px;
+  letter-spacing: 0.16em;
+  color: var(--color-primary);
+}
+
+.codigo-grupo__ayuda {
+  font-size: 13px;
+  color: var(--color-on-surface-variant);
+}
+
+.lista-miembros {
+  list-style: none;
+  margin: 0 0 var(--space-4);
+  padding: 0;
+  border-top: 1px solid var(--color-outline-variant);
+}
+
+.lista-miembros li {
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--color-outline-variant);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--font-size-label);
+}
+
+.lista-miembros__etiqueta {
+  color: var(--color-on-surface-variant);
+  font-size: 12px;
+}
+
+.rejilla-acceso {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.campo__codigo {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-weight: 700;
 }
 
 /* Listas de usuarios y mensajes */
@@ -755,6 +881,10 @@ h2 {
 
   .contenido--formulario > section:first-child {
     margin: 0 auto;
+  }
+
+  .rejilla-acceso {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 

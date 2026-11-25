@@ -1,4 +1,4 @@
-// Piezas comunes a los dos formularios: mostrar errores, validar al salir
+// Piezas comunes a los formularios: mostrar errores, validar al salir
 // del campo y al escribir, y validar todo al enviar.
 
 // Devuelve el valor de un campo convertido a su tipo.

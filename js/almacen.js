@@ -2,7 +2,7 @@
 // Único punto de acceso a localStorage: el resto de la app no toca el
 // almacenamiento del navegador directamente.
 //
-// Colecciones: categorias, tareas, usuarios y mensajes.
+// Colecciones: categorias, tareas, usuarios, grupos, mensajes y sesion.
 
 import { categorias as categoriasSemilla, tareas as tareasSemilla } from './datos.js';
 
