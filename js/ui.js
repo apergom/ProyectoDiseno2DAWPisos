@@ -1,5 +1,14 @@
 // Funciones de dibujo: convierten los datos en HTML.
 
+// Escapa el texto que escribe el usuario antes de meterlo en HTML.
+export function escapar(texto) {
+  return String(texto)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
 // Devuelve el nombre de la categoría de una tarea.
 export function nombreCategoria(tarea, categorias) {
   for (const categoria of categorias) {

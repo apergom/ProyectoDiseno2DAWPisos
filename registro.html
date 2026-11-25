@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registro y usuarios · Planificador</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="cabecera">
+    <p class="cabecera__marca">Piso Calle Mayor</p>
+  </header>
+
+  <main class="contenido">
+    <section aria-labelledby="titulo-registro">
+      <h1 id="titulo-registro">Usuarios del piso</h1>
+      <p class="subtitulo">Crea una cuenta para el piso o edita la de alguien que ya está dentro.</p>
+
+      <form class="formulario" id="formulario-usuario" novalidate>
+        <input type="hidden" name="id" id="usuario-id">
+
+        <div class="campo">
+          <label for="usuario">Nombre de usuario</label>
+          <input
+            id="usuario"
+            name="usuario"
+            type="text"
+            required
+            minlength="3"
+            maxlength="20"
+            autocomplete="username"
+            aria-describedby="error-usuario">
+          <p class="campo__error" id="error-usuario" data-error-para="usuario" aria-live="polite" hidden></p>
+        </div>
+
+        <div class="campo">
+          <label for="email">Correo electrónico</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            required
+            maxlength="120"
+            autocomplete="email"
+            aria-describedby="error-email">
+          <p class="campo__error" id="error-email" data-error-para="email" aria-live="polite" hidden></p>
+        </div>
+
+        <div class="campo campo--contrasena">
+          <label for="contrasena">Contraseña</label>
+          <input
+            id="contrasena"
+            name="contrasena"
+            type="password"
+            required
+            minlength="8"
+            autocomplete="new-password"
+            aria-describedby="ayuda-contrasena error-contrasena">
+          <p class="campo__ayuda" id="ayuda-contrasena">Mínimo 8 caracteres, una mayúscula y un número. No se guarda en el navegador.</p>
+          <p class="campo__error" id="error-contrasena" data-error-para="contrasena" aria-live="polite" hidden></p>
+        </div>
+
+        <div class="campo campo--contrasena">
+          <label for="repeticion">Repetir contraseña</label>
+          <input
+            id="repeticion"
+            name="repeticion"
+            type="password"
+            required
+            autocomplete="new-password"
+            aria-describedby="error-repeticion">
+          <p class="campo__error" id="error-repeticion" data-error-para="repeticion" aria-live="polite" hidden></p>
+        </div>
+
+        <p class="nota" id="nota-edicion" hidden>Al editar no se muestran las contraseñas: nunca se guardan en el navegador.</p>
+
+        <div class="campo">
+          <label for="fecha-nacimiento">Fecha de nacimiento</label>
+          <input
+            id="fecha-nacimiento"
+            name="fechaNacimiento"
+            type="date"
+            required
+            aria-describedby="error-fechaNacimiento">
+          <p class="campo__error" id="error-fechaNacimiento" data-error-para="fechaNacimiento" aria-live="polite" hidden></p>
+        </div>
+
+        <div class="campo campo--casilla">
+          <input
+            id="condiciones"
+            name="condiciones"
+            type="checkbox"
+            required
+            aria-describedby="error-condiciones">
+          <label for="condiciones">Acepto las condiciones de uso del piso y el tratamiento de mis datos.</label>
+          <p class="campo__error" id="error-condiciones" data-error-para="condiciones" aria-live="polite" hidden></p>
+        </div>
+
+        <button class="boton" type="submit" id="boton-guardar">Crear usuario</button>
+        <button class="boton boton--secundario" type="button" id="cancelar-edicion" hidden>Cancelar edición</button>
+      </form>
+
+      <p class="aviso" id="aviso-usuarios" role="status" hidden></p>
+    </section>
+
+    <section aria-labelledby="titulo-lista-usuarios" class="seccion-lista">
+      <h2 id="titulo-lista-usuarios">Usuarios registrados</h2>
+      <p class="subtitulo" id="resumen-usuarios"></p>
+      <ul class="listado" id="listado-usuarios"></ul>
+    </section>
+  </main>
+
+  <nav class="navegacion" aria-label="Secciones de la app">
+    <ul>
+      <li><a href="index.html">Tareas</a></li>
+      <li><a href="calendario.html">Calendario</a></li>
+      <li><a href="chat.html">Chat</a></li>
+      <li><a href="grupo.html">Grupo</a></li>
+      <li><a href="registro.html" aria-current="page">Registro</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="mensajes.html">Mensajes</a></li>
+    </ul>
+  </nav>
+
+  <script type="module" src="js/usuarios.js"></script>
+</body>
+</html>
