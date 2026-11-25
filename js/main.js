@@ -1,7 +1,11 @@
 // Punto de entrada: mira qué página hemos abierto y dibuja su contenido.
 
-import { tareas, categorias } from './datos.js';
+import { obtenerTodos } from './almacen.js';
 import { pintarListado, pintarFicha, pintarProgreso, rellenarFiltros } from './ui.js';
+
+// Los datos se leen siempre a través de la capa de almacenamiento.
+const tareas = obtenerTodos('tareas');
+const categorias = obtenerTodos('categorias');
 
 // Página del panel: listado + progreso.
 const listado = document.getElementById('listado');

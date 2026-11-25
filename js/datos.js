@@ -1,5 +1,6 @@
-// Datos de ejemplo del Planificador.
+// Datos de ejemplo del Planificador (semilla de localStorage).
 // Dos entidades relacionadas: las tareas pertenecen a una categoría (categoriaId).
+// La app no los usa directamente: los copia almacen.js la primera vez.
 
 export const categorias = [
   { id: 1, nombre: 'Limpieza' },
