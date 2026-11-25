@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mensajes enviados · Planificador</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="app">
+  <header class="cabecera">
+    <p class="cabecera__marca">Piso Calle Mayor</p>
+  </header>
+
+  <main class="contenido contenido--formulario contenido--amplio">
+    <section aria-labelledby="titulo-mensajes">
+      <h1 id="titulo-mensajes">Mensajes enviados</h1>
+      <p class="subtitulo" id="resumen-mensajes"></p>
+
+      <ul class="listado" id="listado-mensajes"></ul>
+
+      <a class="boton" href="contacto.html">+ Escribir otro mensaje</a>
+    </section>
+  </main>
+
+  <nav class="navegacion" aria-label="Secciones de la app">
+    <ul>
+      <li><a href="index.html">Tareas</a></li>
+      <li><a href="calendario.html">Calendario</a></li>
+      <li><a href="chat.html">Chat</a></li>
+      <li><a href="grupo.html">Grupo</a></li>
+      <li><a href="registro.html">Registro</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="mensajes.html" aria-current="page">Mensajes</a></li>
+    </ul>
+  </nav>
+
+  <script type="module" src="js/mensajes.js"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto · Planificador</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="app">
+  <header class="cabecera">
+    <p class="cabecera__marca">Piso Calle Mayor</p>
+  </header>
+
+  <main class="contenido contenido--formulario">
+    <section aria-labelledby="titulo-contacto">
+      <h1 id="titulo-contacto">Contacto</h1>
+      <p class="subtitulo">
+        ¿Quieres proponer una tarea, avisar de un problema o cambiar un turno? Escríbenos.
+      </p>
+
+      <p class="nota" id="nota-cookie" hidden>Hemos recordado tu nombre y tu correo de la última vez.</p>
+
+      <form class="formulario" id="formulario-contacto" novalidate>
+        <div class="campo">
+          <label for="nombre">Nombre</label>
+          <input
+            id="nombre"
+            name="nombre"
+            type="text"
+            required
+            minlength="2"
+            maxlength="60"
+            autocomplete="name"
+            aria-describedby="error-nombre">
+          <p class="campo__error" id="error-nombre" data-error-para="nombre" aria-live="polite" hidden></p>
+        </div>
+
+        <div class="campo">
+          <label for="correo">Correo electrónico</label>
+          <input
+            id="correo"
+            name="correo"
+            type="email"
+            required
+            maxlength="120"
+            autocomplete="email"
+            aria-describedby="error-correo">
+          <p class="campo__error" id="error-correo" data-error-para="correo" aria-live="polite" hidden></p>
+        </div>
+
+        <div class="campo">
+          <label for="telefono">Teléfono (opcional)</label>
+          <input
+            id="telefono"
+            name="telefono"
+            type="tel"
+            maxlength="20"
+            autocomplete="tel"
+            aria-describedby="ayuda-telefono error-telefono">
+          <p class="campo__ayuda" id="ayuda-telefono">Solo si quieres que te llamemos. Por ejemplo: 612 345 678.</p>
+          <p class="campo__error" id="error-telefono" data-error-para="telefono" aria-live="polite" hidden></p>
+        </div>
+
+        <div class="campo campo--casilla">
+          <input
+            id="preferencia-llamada"
+            name="preferenciaLlamada"
+            type="checkbox"
+            aria-describedby="error-preferenciaLlamada">
+          <label for="preferencia-llamada">Prefiero que me llaméis</label>
+          <p class="campo__error" id="error-preferenciaLlamada" data-error-para="preferenciaLlamada" aria-live="polite" hidden></p>
+        </div>
+
+        <div class="campo">
+          <label for="motivo">Motivo</label>
+          <select id="motivo" name="motivo" required aria-describedby="error-motivo">
+            <option value="">Elige un motivo</option>
+          </select>
+          <p class="campo__error" id="error-motivo" data-error-para="motivo" aria-live="polite" hidden></p>
+        </div>
+
+        <div class="campo">
+          <label for="mensaje">Mensaje</label>
+          <textarea
+            id="mensaje"
+            name="mensaje"
+            rows="6"
+            required
+            minlength="20"
+            maxlength="500"
+            aria-describedby="contador-mensaje error-mensaje"></textarea>
+          <p class="contador" id="contador-mensaje" data-contador-para="mensaje">0 / 500</p>
+          <p class="campo__error" id="error-mensaje" data-error-para="mensaje" aria-live="polite" hidden></p>
+        </div>
+
+        <button class="boton" type="submit">Enviar mensaje</button>
+      </form>
+
+      <p class="aviso" id="aviso-contacto" role="status" hidden></p>
+
+      <p class="nota">
+        <a class="enlace" href="mensajes.html">Ver los mensajes enviados →</a>
+      </p>
+    </section>
+  </main>
+
+  <nav class="navegacion" aria-label="Secciones de la app">
+    <ul>
+      <li><a href="index.html">Tareas</a></li>
+      <li><a href="calendario.html">Calendario</a></li>
+      <li><a href="chat.html">Chat</a></li>
+      <li><a href="grupo.html">Grupo</a></li>
+      <li><a href="registro.html">Registro</a></li>
+      <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+      <li><a href="mensajes.html">Mensajes</a></li>
+    </ul>
+  </nav>
+
+  <script type="module" src="js/contacto.js"></script>
+</body>
+</html>

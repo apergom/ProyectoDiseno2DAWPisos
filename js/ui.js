@@ -20,7 +20,7 @@ export function nombreCategoria(tarea, categorias) {
 }
 
 // Dibuja la lista de tareas dentro del elemento indicado.
-export function pintarListado(contenedor, tareas, categorias) {
+export function pintarListado(contenedor, tareas) {
   if (tareas.length === 0) {
     contenedor.innerHTML = '<li class="vacia">No hay tareas que coincidan con el filtro.</li>';
     return;
@@ -29,7 +29,6 @@ export function pintarListado(contenedor, tareas, categorias) {
   let html = '';
 
   for (const tarea of tareas) {
-    const categoria = nombreCategoria(tarea, categorias);
     const claseHecha = tarea.estado === 'hecha' ? ' tarjeta--hecha' : '';
     const claseCasilla = tarea.estado === 'hecha' ? ' tarjeta__casilla--hecha' : '';
     const marca = tarea.estado === 'hecha' ? '✓' : '';
@@ -40,7 +39,7 @@ export function pintarListado(contenedor, tareas, categorias) {
           <span class="tarjeta__casilla${claseCasilla}" aria-hidden="true">${marca}</span>
           <span class="tarjeta__textos">
             <span class="tarjeta__titulo">${tarea.titulo}</span>
-            <span class="tarjeta__meta">${categoria} · ${tarea.responsable} · ${tarea.dia} ${tarea.hora}</span>
+            <span class="tarjeta__meta">${tarea.responsable} · ${tarea.dia} ${tarea.hora}</span>
           </span>
         </a>
       </li>`;

@@ -23,6 +23,7 @@ if (formulario) {
 function iniciarRegistro() {
   const lista = document.getElementById('listado-usuarios');
   const resumen = document.getElementById('resumen-usuarios');
+  const titulo = document.getElementById('titulo-registro');
   const aviso = document.getElementById('aviso-usuarios');
   const botonGuardar = document.getElementById('boton-guardar');
   const botonCancelar = document.getElementById('cancelar-edicion');
@@ -150,6 +151,8 @@ function iniciarRegistro() {
     campoContrasena.value = '';
     campoRepeticion.value = '';
 
+    titulo.textContent = 'Editar usuario';
+
     // Al editar no se piden contraseñas: no se guardan.
     campoContrasena.required = false;
     campoRepeticion.required = false;
@@ -170,6 +173,7 @@ function iniciarRegistro() {
   // Vuelve al modo de alta.
   function salirDeEdicion() {
     idOculto.value = '';
+    titulo.textContent = 'Crear cuenta';
     campoContrasena.required = true;
     campoRepeticion.required = true;
     for (const bloque of bloquesContrasena) {

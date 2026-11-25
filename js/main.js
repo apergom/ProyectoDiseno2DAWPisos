@@ -12,7 +12,7 @@ const listado = document.getElementById('listado');
 
 if (listado) {
   rellenarFiltros(categorias, tareas);
-  pintarListado(listado, tareas, categorias);
+  pintarListado(listado, tareas);
   pintarProgreso(tareas);
 
   const formulario = document.getElementById('filtros');
@@ -30,14 +30,14 @@ if (listado) {
       return coincideCategoria && coincidePersona;
     });
 
-    pintarListado(listado, tareasFiltradas, categorias);
+    pintarListado(listado, tareasFiltradas);
     pintarProgreso(tareasFiltradas);
   });
 
   // Botón Limpiar: vuelve a mostrar todas las tareas.
   document.getElementById('filtro-limpiar').addEventListener('click', function () {
     formulario.reset();
-    pintarListado(listado, tareas, categorias);
+    pintarListado(listado, tareas);
     pintarProgreso(tareas);
   });
 }
