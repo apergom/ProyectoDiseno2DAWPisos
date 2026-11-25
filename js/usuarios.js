@@ -24,6 +24,7 @@ function iniciarRegistro() {
   const lista = document.getElementById('listado-usuarios');
   const resumen = document.getElementById('resumen-usuarios');
   const titulo = document.getElementById('titulo-registro');
+  const subtitulo = document.getElementById('subtitulo-registro');
   const aviso = document.getElementById('aviso-usuarios');
   const botonGuardar = document.getElementById('boton-guardar');
   const botonCancelar = document.getElementById('cancelar-edicion');
@@ -152,6 +153,7 @@ function iniciarRegistro() {
     campoRepeticion.value = '';
 
     titulo.textContent = 'Editar usuario';
+    subtitulo.textContent = 'Modifica los datos de la cuenta. La contraseña no se puede mostrar ni guardar.';
 
     // Al editar no se piden contraseñas: no se guardan.
     campoContrasena.required = false;
@@ -174,6 +176,7 @@ function iniciarRegistro() {
   function salirDeEdicion() {
     idOculto.value = '';
     titulo.textContent = 'Crear cuenta';
+    subtitulo.textContent = 'Crea tu cuenta para tu piso. Después podrás editar estos datos desde la lista.';
     campoContrasena.required = true;
     campoRepeticion.required = true;
     for (const bloque of bloquesContrasena) {

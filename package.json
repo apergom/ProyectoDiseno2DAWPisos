@@ -1,9 +1,9 @@
 {
   "name": "planificador-piso",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
-  "description": "Planificador de tareas del piso compartido - Hito 1 de 5",
+  "description": "Planificador de tareas del piso compartido - Hito 2 de 5 (formularios y localStorage)",
   "scripts": {
     "lint": "eslint ."
   },
